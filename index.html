@@ -1,3 +1,4 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Женя Акулов&nbsp;— тренер по&nbsp;выступлениям, аргументации и&nbsp;дебатам</title><style>@font-face{font-family:'Golos Text';font-weight:400;font-display:swap;src:url(fonts/golos-text-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
 @font-face{font-family:'Golos Text';font-weight:400;font-display:swap;src:url(fonts/golos-text-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:'Golos Text';font-weight:500;font-display:swap;src:url(fonts/golos-text-cyrillic-500-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
@@ -217,7 +218,67 @@ section>h2,.ag h2,.cg h2,.phead h1,.pcta h2{line-height:1.15}
 .btn.big{padding:18px 32px;font-size:17px}
 .tgs{font-size:14px!important;color:var(--mut2)!important;margin:16px 0 0!important}
 @container (max-width:760px){.tgbox{padding:26px}}
-</style></head><body><div class="page"><div class="site light f-dela"><header class="hero"><nav class="nav"><a class="logo" href="index.html">Женя Акулов</a><span class="links"><a href="#tasks">Задачи</a><a href="#approach">Подход</a><a href="#debates">Дебаты</a><a href="#cases">Кейсы</a><a href="#about">Обо&nbsp;мне</a><a href="#reviews">Отзывы</a></span><button class="theme" type="button" aria-label="Сменить тему"><span class="tt-d">светлая&nbsp;тема</span><span class="tt-l">тёмная&nbsp;тема</span></button><a class="btn sm" href="#contact">Обсудить задачу</a></nav>
+
+/* ===== round 2: theme icon + mobile rhythm ===== */
+.site .theme{width:40px;height:40px;padding:0;display:grid;place-items:center;flex:none;border-radius:50%;box-shadow:inset 0 0 0 1px var(--line);transition:box-shadow .2s,transform .3s}
+.site .theme::before{content:none}
+.site .theme:hover{box-shadow:inset 0 0 0 1.5px var(--ink);transform:rotate(-15deg)}
+.theme svg{width:19px;height:19px;fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.theme .ic-moon{fill:var(--ink);stroke:none}
+.light .ic-sun{display:none}.dark .ic-moon{display:none}
+.site h1,.site h2{hyphens:manual!important;-webkit-hyphens:manual!important}
+@container (max-width:760px){
+ .site h1{font-size:calc(34px*var(--k))}
+ .cases article,.cases .c2{grid-template-columns:1fr!important}
+ .ag figure{order:2}.ag .big img{aspect-ratio:4/3}
+ .sbig img{aspect-ratio:4/3;transform:rotate(-1.5deg)}
+ .tl{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-right:-20px;padding-right:20px;scrollbar-width:none}
+ .tl::-webkit-scrollbar{display:none}
+ .tl li{flex:0 0 72%;scroll-snap-align:start}
+ .tph img{aspect-ratio:16/10}
+ .site .theme{width:38px;height:38px}
+}
+/* mobile trims */
+.more-m>summary{display:none}
+.tph img{object-position:50% 40%}
+@container (max-width:760px){
+ .more-m>summary{display:flex;padding:18px 0;border-top:1px solid var(--line);font-size:16px;justify-content:space-between;width:100%}
+ .sqs .sq:nth-child(n+4){display:none}
+ .vg{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;margin-right:-20px;padding-right:20px;scrollbar-width:none}
+ .vg::-webkit-scrollbar{display:none}
+ .vc{flex:0 0 64%;scroll-snap-align:start;min-height:160px}
+ .tph img{aspect-ratio:4/5}
+}
+@container (max-width:760px){.tph img{aspect-ratio:1/1}}
+/* reviews separation */
+.sq{padding-top:24px;border-top:1px solid var(--line)}
+.sq p:first-child::before{content:'';display:block;width:28px;height:3px;background:var(--acc);margin-bottom:16px;border-radius:2px}
+.sq .w{margin-top:14px!important}
+/* mobile type scale -1 step */
+@container (max-width:760px){
+ .site p,.site li,.site dd,.site dt{font-size:15px}
+ .lead,.ag p,.sg p,.dg p,.appr p,.td p,.crow p,.cases article p,.kor p,.two p{font-size:15px!important;line-height:1.6}
+ .sq p{font-size:15.5px!important;line-height:1.55}
+ .sq .w,.meta,.tag,.facts p,.logos,.mini span,figcaption,.cred2,.tl span,.edu,.cl,.vc>span:last-child,.cm span,.lk,.ls{font-size:13px!important}
+ .sqs{gap:34px!important}
+ .pc .q{font-size:16px!important}
+ .bq>p{font-size:18px!important}
+ .site h3,.trow h3,.cases h3,.crow h3,.steps h3{font-size:17px!important}
+ .facts b{font-size:24px}
+ .qs summary{font-size:16px!important}
+ .cl{font-size:15px!important}
+ .tgq{font-size:16px!important}
+ .mid p{font-size:18px!important}
+ .site .mq2,.site .mq2.col{font-size:calc(19px*var(--k))!important}
+ .bigq blockquote{font-size:calc(24px*var(--k))!important}
+ .kor blockquote{font-size:calc(21px*var(--k))!important}
+ .lq,.aqt,.cm p{font-size:15px!important}
+ .big{font-size:19px!important}
+ .num,.cases .num{font-size:52px!important}
+ .bign b{font-size:46px!important}
+}
+@container (max-width:760px){section>h2,.ag h2,.cg h2,.pcta h2,.sg h2{font-size:min(calc(25px*var(--k)),7.2cqw)}.site h1{font-size:min(calc(32px*var(--k)),9cqw)}}
+</style></head><body><div class="page"><div class="site light f-dela"><header class="hero"><nav class="nav"><a class="logo" href="index.html">Женя Акулов</a><span class="links"><a href="#tasks">Задачи</a><a href="#approach">Подход</a><a href="#debates">Дебаты</a><a href="#cases">Кейсы</a><a href="#about">Обо&nbsp;мне</a><a href="#reviews">Отзывы</a></span><button class="theme" type="button" aria-label="Сменить тему" title="Сменить тему"><svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg><svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button><a class="btn sm" href="#contact">Обсудить задачу</a></nav>
 <div class="h"><div><p class="hi">Привет, я&nbsp;Женя&nbsp;—</p>
 <h1>помогаю сложным идеям звучать <span class="strike">умно</span> <span class="acc">ясно</span></h1>
 <p class="lead">Работаю не&nbsp;только с&nbsp;тем, как&nbsp;человек выступает, но&nbsp;и&nbsp;с&nbsp;тем, что&nbsp;он&nbsp;говорит: главная мысль, структура, аргументы и&nbsp;история. Готовлю спикеров к&nbsp;конференциям, обучаю команды и&nbsp;веду мероприятия&nbsp;— на&nbsp;русском и&nbsp;английском.</p>
@@ -226,7 +287,7 @@ section>h2,.ag h2,.cg h2,.phead h1,.pcta h2{line-height:1.15}
 <div class="facts"><p><b>800+</b> выступлений подготовлено</p><p><b>200+</b> конференций, где&nbsp;выступали мои&nbsp;спикеры</p><p><b>400+</b> часов корпоративных тренингов</p><p><b>4000+</b> человек в&nbsp;зале на&nbsp;мероприятиях, которые я&nbsp;вёл</p></div>
 <p class="logos">Больше 7&nbsp;лет в&nbsp;выступлениях и&nbsp;дебатах. Работал с&nbsp;командами VK, Яндекса, OZON, Т-Банка, Газпром нефти, Ростелекома, Асконы, inDrive, Manychat, Sumsub, ecom.tech, Додо, X5&nbsp;Tech и&nbsp;MC&nbsp;Bauchemie. Мои&nbsp;спикеры выступали на&nbsp;TEDx Talks, HighLoad, CodeFest, Heisenbug, Frontend Conf, Mobius, VK&nbsp;JT и&nbsp;EuroPython.</p>
 </header><section id="tasks"><p class="lbl">(&nbsp;задачи&nbsp;)</p><h2>С&nbsp;чем&nbsp;ко&nbsp;мне приходят</h2>
-<div class="tg"><figure class="tph"><img src="img/dodo.jpg" alt="Женя на съезде партнёров Додо"><figcaption>Съезд партнёров&nbsp;Додо</figcaption></figure><div class="rows">
+<div class="tg"><figure class="tph"><img src="img/training2.jpg" alt="Женя слушает участника на тренинге"><figcaption>На&nbsp;тренинге: сначала слушаю, потом предлагаю решения</figcaption></figure><div class="rows">
 <div class="trow"><div class="tm"><p class="tk">подготовить</p><h3>выступление к&nbsp;конференции, питчу или&nbsp;TEDx</h3><p class="meta">Готовый доклад: 1–2&nbsp;встречи<br>С&nbsp;нуля: обычно 3–5<br>TEDx, EuroPython, HighLoad</p></div><div class="td"><p>Для&nbsp;экспертов, руководителей, спикеров и&nbsp;организаторов конференций. В&nbsp;итоге&nbsp;— выступление с&nbsp;понятной главной мыслью, логикой и&nbsp;аргументами. И&nbsp;спикер, который понимает, что&nbsp;хочет сказать аудитории, и&nbsp;знает, как&nbsp;это&nbsp;сделать.</p><details><summary>подробнее</summary><ol><li>Разбираемся с&nbsp;задачей: кто&nbsp;аудитория, что&nbsp;ей&nbsp;важно и&nbsp;какую мысль она&nbsp;должна&nbsp;унести</li><li>Проверяем аргументы, отбираем содержание и&nbsp;убираем&nbsp;лишнее</li><li>Собираем структуру: примеры, объяснения, истории и&nbsp;переходы</li><li>Репетируем: подача, темп, интонация</li><li>Готовимся к&nbsp;вопросам и&nbsp;дорабатываем слабые&nbsp;места</li></ol></details></div></div>
 <div class="trow"><div class="tm"><p class="tk">обучить</p><h3>команду выступать, презентовать идеи и&nbsp;отстаивать позицию</h3><p class="meta">От&nbsp;воркшопа на&nbsp;2&nbsp;часа до&nbsp;программы<br>Онлайн и&nbsp;офлайн<br>VK: 4&nbsp;воркшопа и&nbsp;3&nbsp;курса</p></div><div class="td"><p>Для&nbsp;HR, L&amp;D и&nbsp;руководителей команд. Публичные выступления, презентации, функциональная риторика, аргументация и&nbsp;убеждение, дебаты.</p><details><summary>подробнее</summary><p>Я&nbsp;не&nbsp;очень люблю лекции как&nbsp;формат, хотя сам могу часами рассказывать об&nbsp;аргументации. Слушать, как&nbsp;нужно что-то делать,&nbsp;— не&nbsp;самый надёжный способ научиться. Поэтому короткая теория у&nbsp;меня сразу идёт в&nbsp;практику: участники объясняют сложное, отвечают на&nbsp;неудобные вопросы, питчат, спорят и&nbsp;получают конкретную обратную связь&nbsp;— что&nbsp;получилось, что&nbsp;нет и&nbsp;как&nbsp;сделать&nbsp;лучше.</p></details></div></div>
 <div class="trow"><div class="tm"><p class="tk">провести</p><h3>конференцию, секцию или&nbsp;дебаты на&nbsp;мероприятии</h3><p class="meta">X5&nbsp;DataFest 2025<br>Съезд партнёров Додо<br>Крокус Экспо, Сибур&nbsp;Арена</p></div><div class="td"><p>Для&nbsp;организаторов конференций и&nbsp;внутренних событий. Беру на&nbsp;себя всё, что&nbsp;происходит на&nbsp;сцене и&nbsp;в&nbsp;зале: спикеров, вопросы, тайминг и&nbsp;неожиданности.</p><details><summary>подробнее</summary><p>Веду мероприятия на&nbsp;русском и&nbsp;английском. Площадки: Крокус Экспо, кластер «Ломоносов», Сибур&nbsp;Арена.</p></details></div></div>
@@ -247,7 +308,7 @@ section>h2,.ag h2,.cg h2,.phead h1,.pcta h2{line-height:1.15}
 <p class="cred2">Дважды плей-офф чемпионата мира WUDC (2022&nbsp;и&nbsp;2024) · 20+&nbsp;побед и&nbsp;титулов лучшего спикера на&nbsp;всероссийских и&nbsp;международных чемпионатах · главный судья крупнейших мероприятий по&nbsp;дебатам</p></section><section class="cases" id="cases"><p class="lbl">(&nbsp;кейсы&nbsp;)</p><h2>Что&nbsp;получилось</h2>
 <article class="c1"><p class="num">50&nbsp;→&nbsp;15<small>минут</small></p><div><p class="tag">TEDx на&nbsp;Кипре · на&nbsp;английском · 5&nbsp;встреч</p><h3>Превратили 15&nbsp;лет опыта в&nbsp;<span class="nw">15-минутную</span> историю об&nbsp;образовании&nbsp;детей</h3><p>Полина Мальцева, одна из&nbsp;создателей школы «Летово». Нашли главную мысль, отфильтровали материал, добавили личные истории и&nbsp;отрепетировали текст так, чтобы&nbsp;он&nbsp;звучал естественно на&nbsp;неродном&nbsp;языке.</p><p class="row2"><a class="u" href="https://www.youtube.com/watch?v=EdkUNtvmJrM" target="_blank" rel="noopener">Смотреть выступление ↗</a><a class="u" href="case-tedx.html">Читать кейс →</a></p></div></article>
 <article class="c2"><p class="num">9,8<small>из&nbsp;10&nbsp;— общая оценка интенсива</small></p><div><p class="tag">Плитонит (MC&nbsp;Bauchemie) · 90&nbsp;участников</p><h3>Дебаты для&nbsp;команды, которую сложно удивить тренингами, и&nbsp;рекордные оценки обратной&nbsp;связи</h3><p>Многие участники уже&nbsp;прошли немало тренингов, поэтому мы&nbsp;не&nbsp;стали строить программу вокруг очередной лекции. Участники знакомились с&nbsp;инструментами аргументации, пробовали их&nbsp;в&nbsp;дебатах и&nbsp;получали обратную связь. После саммита гендиректор заинтересовался идеей корпоративного дебатного&nbsp;клуба.</p><p class="tag">вовлечённость 9,75 · работа тренеров&nbsp;9,9</p><p class="row2"><a class="u" href="case-plitonit.html">Читать кейс →</a></p></div></article>
-<ul class="mini"><li><b>Ростелеком</b><span>64&nbsp;руководителя из&nbsp;филиалов подготовились к&nbsp;защите проектов, программа стала проектом года в&nbsp;компании</span></li><li><b>VK</b><span>4&nbsp;воркшопа и&nbsp;3&nbsp;курса по&nbsp;коммуникации для&nbsp;спикеров</span></li><li><b>EuroPython&nbsp;2026</b><span>Дарья Корсакова (Manychat): из&nbsp;статьи&nbsp;— в&nbsp;технический доклад на&nbsp;английском</span></li><li><b>X5&nbsp;DataFest&nbsp;2025</b><span>модерация всей конференции</span></li><li><b>Съезд партнёров&nbsp;Додо</b><span>подготовка спикеров и&nbsp;модерация AI-секции</span></li></ul><div class="vids"><p class="vlab">Выступления моих спикеров</p><div class="vg">
+<details class="more-m" open><summary>Ещё&nbsp;проекты</summary><ul class="mini"><li><b>Ростелеком</b><span>64&nbsp;руководителя из&nbsp;филиалов подготовились к&nbsp;защите проектов, программа стала проектом года в&nbsp;компании</span></li><li><b>VK</b><span>4&nbsp;воркшопа и&nbsp;3&nbsp;курса по&nbsp;коммуникации для&nbsp;спикеров</span></li><li><b>EuroPython&nbsp;2026</b><span>Дарья Корсакова (Manychat): из&nbsp;статьи&nbsp;— в&nbsp;технический доклад на&nbsp;английском</span></li><li><b>X5&nbsp;DataFest&nbsp;2025</b><span>модерация всей конференции</span></li><li><b>Съезд партнёров&nbsp;Додо</b><span>подготовка спикеров и&nbsp;модерация AI-секции</span></li></ul></details><div class="vids"><p class="vlab">Выступления моих спикеров</p><div class="vg">
 <a class="vc" href="https://www.youtube.com/watch?v=EdkUNtvmJrM" target="_blank" rel="noopener"><span class="pl">▶</span><b>Best education for your&nbsp;child</b><span>Полина Мальцева · TEDx, на&nbsp;английском</span></a>
 <a class="vc" href="https://www.youtube.com/watch?v=X7jbc8EVs-w" target="_blank" rel="noopener"><span class="pl">▶</span><b>Stop firefighting: practical observability for&nbsp;Python</b><span>Дарья Корсакова · EuroPython, на&nbsp;английском</span></a>
 <a class="vc" href="https://www.youtube.com/watch?v=uPfRowyLxD0" target="_blank" rel="noopener"><span class="pl">▶</span><b>3&nbsp;Амиго на&nbsp;страже качества и&nbsp;спокойствия</b><span>Сергей Лебедев · SQA Days&nbsp;#35</span></a>
@@ -292,4 +353,6 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserve
  document.querySelector('.strike')&&document.querySelector('.strike').classList.add('draw');
 }
 })();
+(function(){var m=matchMedia('(max-width:760px)');function f(){document.querySelectorAll('.more-m').forEach(function(d){d.open=!m.matches})}f();m.addEventListener&&m.addEventListener('change',f)})();
 </script></body></html>
+</body></html>

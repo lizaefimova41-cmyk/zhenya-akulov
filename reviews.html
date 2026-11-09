@@ -217,6 +217,66 @@ section>h2,.ag h2,.cg h2,.phead h1,.pcta h2{line-height:1.15}
 .btn.big{padding:18px 32px;font-size:17px}
 .tgs{font-size:14px!important;color:var(--mut2)!important;margin:16px 0 0!important}
 @container (max-width:760px){.tgbox{padding:26px}}
+
+/* ===== round 2: theme icon + mobile rhythm ===== */
+.site .theme{width:40px;height:40px;padding:0;display:grid;place-items:center;flex:none;border-radius:50%;box-shadow:inset 0 0 0 1px var(--line);transition:box-shadow .2s,transform .3s}
+.site .theme::before{content:none}
+.site .theme:hover{box-shadow:inset 0 0 0 1.5px var(--ink);transform:rotate(-15deg)}
+.theme svg{width:19px;height:19px;fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.theme .ic-moon{fill:var(--ink);stroke:none}
+.light .ic-sun{display:none}.dark .ic-moon{display:none}
+.site h1,.site h2{hyphens:manual!important;-webkit-hyphens:manual!important}
+@container (max-width:760px){
+ .site h1{font-size:calc(34px*var(--k))}
+ .cases article,.cases .c2{grid-template-columns:1fr!important}
+ .ag figure{order:2}.ag .big img{aspect-ratio:4/3}
+ .sbig img{aspect-ratio:4/3;transform:rotate(-1.5deg)}
+ .tl{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-right:-20px;padding-right:20px;scrollbar-width:none}
+ .tl::-webkit-scrollbar{display:none}
+ .tl li{flex:0 0 72%;scroll-snap-align:start}
+ .tph img{aspect-ratio:16/10}
+ .site .theme{width:38px;height:38px}
+}
+/* mobile trims */
+.more-m>summary{display:none}
+.tph img{object-position:50% 40%}
+@container (max-width:760px){
+ .more-m>summary{display:flex;padding:18px 0;border-top:1px solid var(--line);font-size:16px;justify-content:space-between;width:100%}
+ .sqs .sq:nth-child(n+4){display:none}
+ .vg{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;margin-right:-20px;padding-right:20px;scrollbar-width:none}
+ .vg::-webkit-scrollbar{display:none}
+ .vc{flex:0 0 64%;scroll-snap-align:start;min-height:160px}
+ .tph img{aspect-ratio:4/5}
+}
+@container (max-width:760px){.tph img{aspect-ratio:1/1}}
+/* reviews separation */
+.sq{padding-top:24px;border-top:1px solid var(--line)}
+.sq p:first-child::before{content:'';display:block;width:28px;height:3px;background:var(--acc);margin-bottom:16px;border-radius:2px}
+.sq .w{margin-top:14px!important}
+/* mobile type scale -1 step */
+@container (max-width:760px){
+ .site p,.site li,.site dd,.site dt{font-size:15px}
+ .lead,.ag p,.sg p,.dg p,.appr p,.td p,.crow p,.cases article p,.kor p,.two p{font-size:15px!important;line-height:1.6}
+ .sq p{font-size:15.5px!important;line-height:1.55}
+ .sq .w,.meta,.tag,.facts p,.logos,.mini span,figcaption,.cred2,.tl span,.edu,.cl,.vc>span:last-child,.cm span,.lk,.ls{font-size:13px!important}
+ .sqs{gap:34px!important}
+ .pc .q{font-size:16px!important}
+ .bq>p{font-size:18px!important}
+ .site h3,.trow h3,.cases h3,.crow h3,.steps h3{font-size:17px!important}
+ .facts b{font-size:24px}
+ .qs summary{font-size:16px!important}
+ .cl{font-size:15px!important}
+ .tgq{font-size:16px!important}
+ .mid p{font-size:18px!important}
+ .site .mq2,.site .mq2.col{font-size:calc(19px*var(--k))!important}
+ .bigq blockquote{font-size:calc(24px*var(--k))!important}
+ .kor blockquote{font-size:calc(21px*var(--k))!important}
+ .lq,.aqt,.cm p{font-size:15px!important}
+ .big{font-size:19px!important}
+ .num,.cases .num{font-size:52px!important}
+ .bign b{font-size:46px!important}
+}
+@container (max-width:760px){section>h2,.ag h2,.cg h2,.pcta h2,.sg h2{font-size:min(calc(25px*var(--k)),7.2cqw)}.site h1{font-size:min(calc(32px*var(--k)),9cqw)}}
 .nav a.logo{text-decoration:none;font-weight:600;font-size:17px;margin-right:auto}
 .nav .links a{text-decoration:none}
 .pin{padding:60px 6cqw 0}
@@ -306,7 +366,9 @@ a.vid{text-decoration:none;color:inherit}a.vid:hover .play{transform:scale(1.06)
 .vrev{background:var(--sf);color:var(--ink)!important}.vrev .pl{background:var(--btn);color:var(--btnt)}
 .vph2{border:1.5px dashed var(--line);background:var(--sf);border-radius:22px;padding:30px}
 .vph2 .play{background:var(--line)!important;color:var(--ink)!important}
-</style></head><body><div class="page"><div class="site light f-dela"><header class="phead"><nav class="nav"><a class="logo" href="index.html">Женя Акулов</a><span class="links"><a href="index.html#tasks">Задачи</a><a href="index.html#debates">Дебаты</a><a href="index.html#cases">Кейсы</a><a href="reviews.html">Отзывы</a></span><button class="theme" type="button" aria-label="Сменить тему"><span class="tt-d">светлая&nbsp;тема</span><span class="tt-l">тёмная&nbsp;тема</span></button><a class="btn sm" href="index.html#contact">Обсудить задачу</a></nav><div class="pin"><a class="back" href="index.html">← На&nbsp;главную</a>
+@container (max-width:760px){.phead h1{font-size:min(calc(32px*var(--k)),7.6cqw)}}
+@container (max-width:760px){.phead h1{font-size:min(calc(32px*var(--k)),6.6cqw)}}
+</style></head><body><div class="page"><div class="site light f-dela"><header class="phead"><nav class="nav"><a class="logo" href="index.html">Женя Акулов</a><span class="links"><a href="index.html#tasks">Задачи</a><a href="index.html#debates">Дебаты</a><a href="index.html#cases">Кейсы</a><a href="reviews.html">Отзывы</a></span><button class="theme" type="button" aria-label="Сменить тему" title="Сменить тему"><svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg><svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button><a class="btn sm" href="index.html#contact">Обсудить задачу</a></nav><div class="pin"><a class="back" href="index.html">← На&nbsp;главную</a>
 <p class="lbl">(&nbsp;отзывы&nbsp;)</p><h1>Что&nbsp;говорят после работы со&nbsp;мной</h1>
 <p class="lead">После каждой консультации спикеры анонимно оценивают встречу. Здесь их&nbsp;комментарии без&nbsp;правок по&nbsp;смыслу, отзывы заказчиков и&nbsp;благодарственные письма компаний.</p>
 <div class="bign"><p><b>79</b>оценок после консультаций с&nbsp;марта&nbsp;2025</p><p><b>9,8</b>средняя оценка из&nbsp;10</p><p><b>37</b>комментариев спикеров</p></div></div></header>
@@ -353,4 +415,5 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserve
  document.querySelector('.strike')&&document.querySelector('.strike').classList.add('draw');
 }
 })();
+(function(){var m=matchMedia('(max-width:760px)');function f(){document.querySelectorAll('.more-m').forEach(function(d){d.open=!m.matches})}f();m.addEventListener&&m.addEventListener('change',f)})();
 </script></body></html>
