@@ -1,0 +1,356 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Отзывы · Женя Акулов</title><style>@font-face{font-family:'Golos Text';font-weight:400;font-display:swap;src:url(fonts/golos-text-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-weight:400;font-display:swap;src:url(fonts/golos-text-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Golos Text';font-weight:500;font-display:swap;src:url(fonts/golos-text-cyrillic-500-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-weight:500;font-display:swap;src:url(fonts/golos-text-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Golos Text';font-weight:600;font-display:swap;src:url(fonts/golos-text-cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-weight:600;font-display:swap;src:url(fonts/golos-text-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Golos Text';font-weight:700;font-display:swap;src:url(fonts/golos-text-cyrillic-700-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-weight:700;font-display:swap;src:url(fonts/golos-text-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Dela Gothic One';font-weight:400;font-display:swap;src:url(fonts/dela-gothic-one-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Dela Gothic One';font-weight:400;font-display:swap;src:url(fonts/dela-gothic-one-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Gearz';font-weight:700;src:url(fonts/gearz-b.woff2) format('woff2')}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:transparent;font-family:'Golos Text',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.page{max-width:1440px;margin:0 auto}
+.tool{position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;gap:8px 18px;padding:10px 16px;background:rgba(24,24,27,.9);backdrop-filter:blur(10px)}
+.tool>div{display:flex;gap:6px}
+.tool button{font:500 14px 'Golos Text';border:0;border-radius:99px;padding:8px 14px;background:rgba(255,255,255,.1);color:#eee;cursor:pointer}
+.tool button.on{background:#2F43C4;color:#fff}
+@media (max-width:700px){.tool{position:static}}
+
+.f-gearz{--disp:'Gearz';--dw:700;--ls:-.01em;--k:1}
+.f-dela{--disp:'Dela Gothic One';--dw:400;--ls:-.01em;--k:.88}
+
+.dark{--bg:#232327;--sf:#2D2D32;--ink:#F4F2EE;--mut:rgba(244,242,238,.8);--mut2:rgba(244,242,238,.55);--line:rgba(244,242,238,.13);--acc:#3D52D6;--acct:#9AA8FF;--hl:#1F2C86;--hlt:#F4F2EE;--btn:#2F43C4;--btnt:#FFFFFF}
+.light{--bg:#F5F5F3;--sf:#EBEBE8;--ink:#1E1F24;--mut:rgba(30,31,36,.84);--mut2:rgba(30,31,36,.56);--line:rgba(30,31,36,.13);--acc:#1F2C86;--acct:#1F2C86;--hl:#1F2C86;--hlt:#F4F2EE;--btn:#1F2C86;--btnt:#FFFFFF}
+
+.site{container-type:inline-size;background:var(--bg);color:var(--ink);overflow:hidden}
+.site a{color:inherit;cursor:pointer}
+.site h1,.site h2{font-family:var(--disp);font-weight:var(--dw);letter-spacing:var(--ls)}
+.site h3{font:600 20px/1.3 'Golos Text';margin:0}
+.site p{line-height:1.6}
+img{display:block;max-width:100%}figure{margin:0}figcaption{font-size:13px;color:var(--mut);margin-top:10px}
+.btn{display:inline-flex;align-items:center;white-space:nowrap;padding:15px 26px;border-radius:99px;font:600 16px 'Golos Text';text-decoration:none;border:0;cursor:pointer;background:var(--btn);color:var(--btnt)!important}
+.btn.sm{padding:10px 18px;font-size:14px}
+.lnk,.u{font-weight:500;text-decoration:underline;text-decoration-color:var(--acc);text-decoration-thickness:2px;text-underline-offset:5px}
+.row{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.lbl{font-size:14px;color:var(--acct);margin:0 0 18px}
+
+.nav{display:flex;align-items:center;gap:26px;padding:28px 6cqw}
+.nav .logo{font-weight:600;font-size:17px;margin-right:auto}
+.nav .links{display:flex;gap:26px;font-size:14px;color:var(--mut)}
+.h{display:grid;grid-template-columns:1.3fr 1fr;gap:7cqw;padding:80px 6cqw 120px;align-items:center}
+.hi{font-size:18px;color:var(--mut);margin:0 0 18px}
+.site h1{font-size:calc(clamp(42px,5.4cqw,80px)*var(--k));line-height:1.04;margin:0 0 36px}
+.acc{color:var(--acct)}
+.strike{position:relative;color:var(--mut);opacity:.6;white-space:nowrap;margin-right:.15em}
+.strike::after{content:'';position:absolute;left:-4%;right:-4%;top:50%;height:.11em;background:var(--acc);transform:rotate(-4deg)}
+.lead{font-size:18px;color:var(--mut);max-width:560px;margin:0 0 36px}
+.hph{position:relative;transform:rotate(2.5deg)}
+.hph img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;border-radius:24px}
+.glass{position:absolute;left:24px;bottom:28px;padding:12px 20px;border-radius:99px;font-size:15px;font-weight:500;color:#fff;background:rgba(35,35,39,.3);border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transform:rotate(-4deg)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:4cqw;padding:0 6cqw;border-top:1px solid var(--line);margin:0 6cqw;padding:28px 0 0}
+.facts p{margin:0;font-size:15px;color:var(--mut);line-height:1.45}.facts b{display:block;font-size:30px;font-weight:600;color:var(--ink);margin-bottom:4px;letter-spacing:-.02em}
+.logos{padding:36px 6cqw 0;margin:0;font-size:14px;color:var(--mut);max-width:1100px}
+
+section{padding:160px 6cqw 0}
+section>h2,.ag h2,.cg h2{font-size:calc(clamp(34px,4.2cqw,62px)*var(--k));line-height:1.05;margin:0 0 64px;max-width:1000px}
+
+.trow{display:grid;grid-template-columns:160px 1fr 1.2fr;gap:4cqw;padding:34px 0;border-top:1px solid var(--line)}
+.trow:last-child{border-bottom:1px solid var(--line)}
+.tk{margin:2px 0 0;font-size:15px;color:var(--acct)}
+.tm h3{margin-bottom:14px}.meta{margin:0;font-size:14px;color:var(--mut);line-height:1.6}
+.td p{margin:0 0 12px;font-size:16px;color:var(--mut)}
+details summary{list-style:none;cursor:pointer;font-size:14px;font-weight:500;color:var(--ink);display:inline-flex;gap:8px;align-items:center}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-size:18px;transition:transform .2s;color:var(--acct)}
+details[open] summary::after{transform:rotate(45deg)}
+details p,details ol{font-size:15px;color:var(--mut);line-height:1.6;margin:12px 0 0}details ol{padding-left:18px}
+
+.pcols{display:grid;grid-template-columns:repeat(3,1fr);gap:5cqw}
+.pc{border-top:2px solid var(--acc);padding-top:26px}
+.pc h3{font-size:21px;margin-bottom:16px}
+.pc>p{font-size:16px;color:var(--mut);margin:0 0 14px}
+.pc .q{margin:26px 0 0;font-size:15px;font-style:italic;color:var(--ink)}.pc .q span{display:block;font-style:normal;font-size:13px;color:var(--mut);margin-top:6px}
+
+.ag{display:grid;grid-template-columns:1.1fr 1fr;gap:7cqw;align-items:center}
+.ag .big img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px}
+.ag h2{margin-bottom:30px}
+.ag p{font-size:17px;color:var(--mut);margin:0 0 16px;max-width:560px}
+.dash{list-style:none;padding:0;margin:30px 0 0}.dash li{padding:12px 0;border-top:1px solid var(--line);font-size:15px}
+
+.wide img{width:100%;height:440px;object-fit:cover;border-radius:24px}
+.dg{display:grid;grid-template-columns:1fr 1fr;gap:6cqw;margin-top:56px}
+.dg p{font-size:17px;color:var(--mut);margin:0 0 14px}
+.dg .small{font-size:15px;margin-top:26px}
+.fl{margin:0}.fl dt{font-weight:600;font-size:17px;padding-top:18px;border-top:1px solid var(--line)}.fl dd{margin:4px 0 18px;color:var(--mut);font-size:15px}
+.cred2{margin:44px 0 0;font-size:14px;color:var(--mut);max-width:900px}
+
+.cases article{display:grid;grid-template-columns:1fr 1.2fr;gap:6cqw;align-items:center;padding:56px 0;border-top:1px solid var(--line)}
+.cases .num{margin:0;font-size:clamp(64px,8cqw,124px);font-weight:400;line-height:.9;letter-spacing:-.04em;color:var(--acct)}.num small{display:block;font-size:16px;letter-spacing:0;color:var(--mut);margin-top:12px}
+.tag{font-size:13px;color:var(--mut);margin:0 0 12px}
+.cases h3{font-size:24px;line-height:1.25;margin-bottom:16px}
+.cases article p{font-size:16px;color:var(--mut)}
+.c2 img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:24px}
+.cases .score{font-size:30px;font-weight:600;color:var(--ink)!important;margin:18px 0 0}.score span{display:block;font-size:14px;font-weight:400;color:var(--mut)}
+.row2{display:flex;gap:24px;margin-top:20px}
+.mini{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.mini li{display:grid;grid-template-columns:260px 1fr;gap:4cqw;padding:16px 0;border-bottom:1px solid var(--line);font-size:15px}.mini span{color:var(--mut)}
+
+.sg{display:grid;grid-template-columns:.8fr 1.3fr;gap:6cqw;align-items:start}
+.sg img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px;transform:rotate(-2deg)}
+.sg p{font-size:17px;color:var(--mut);margin:0 0 16px}
+.edu{display:grid;grid-template-columns:120px 1fr;gap:10px 20px;margin:34px 0 0;font-size:15px}.edu dt{color:var(--acct)}.edu dd{margin:0;color:var(--mut)}
+.tl{list-style:none;padding:0;margin:80px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.tl img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:16px;margin-bottom:12px}.tl span{font-size:14px;color:var(--mut)}
+
+.bq{margin:0 0 70px;padding:56px 6cqw 46px;border-radius:28px;background:var(--hl);color:var(--hlt)}
+.bq>p{font-size:clamp(22px,2.4cqw,32px);line-height:1.35;margin:0 0 26px;font-weight:500;max-width:1000px}
+.bq footer{font-size:15px;opacity:.75;margin-bottom:18px}.bq summary{color:var(--hlt)}.bq summary::after{color:var(--hlt)}.bq details p{color:var(--hlt);opacity:.8;max-width:900px}
+.sqs{display:grid;grid-template-columns:1fr 1fr;gap:50px 6cqw;margin-bottom:50px}
+.sq p{margin:0;font-size:18px;line-height:1.55}.sq .w{font-size:14px;color:var(--mut);margin-top:12px}.sq .w b{color:var(--ink);font-weight:600}
+
+.qs details{display:block;border-top:1px solid var(--line);padding:24px 0}.qs details:last-child{border-bottom:1px solid var(--line)}
+.qs summary{font-size:19px;display:flex;justify-content:space-between;width:100%}.qs details p{font-size:16px;max-width:760px}
+.contact{padding-bottom:140px}
+.cg{display:grid;grid-template-columns:1.2fr 1fr;gap:7cqw}
+.cg h2{margin-bottom:22px}.cg p{font-size:17px;color:var(--mut);margin:0 0 30px}
+.cl{display:grid;grid-template-columns:120px 1fr;gap:12px 20px;margin:0;font-size:17px}.cl dt{color:var(--mut)}.cl dd{margin:0}
+form{display:flex;flex-direction:column;gap:6px;padding-top:6px}
+form input,form textarea{font:17px 'Golos Text';padding:16px 0;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);outline:0}
+form input::placeholder,form textarea::placeholder{color:var(--mut)}
+form .btn{margin-top:26px;align-self:flex-start}form small{font-size:12px;color:var(--mut);margin-top:12px}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:26px 6cqw 36px;font-size:14px;color:var(--mut);border-top:1px solid var(--line)}
+
+@container (max-width:760px){
+ .nav{padding:18px 20px}.nav .links{display:none}
+ .h,.ag,.dg,.cases article,.sg,.cg,.pcols,.sqs{grid-template-columns:1fr}
+ .h{padding:30px 20px 70px;gap:44px}.hph{transform:rotate(1.5deg);margin:0 6px}
+ .facts{grid-template-columns:1fr 1fr;margin:0 20px;gap:22px}.logos{padding:28px 20px 0}
+ section{padding:100px 20px 0}section>h2,.ag h2,.cg h2{margin-bottom:40px}
+ .trow{grid-template-columns:1fr;gap:10px}
+ .mini li{grid-template-columns:1fr;gap:4px}
+ .wide img{height:240px}.tl{grid-template-columns:1fr 1fr}
+ .bq{padding:36px 22px}.contact{padding-bottom:80px}.foot{padding:22px 20px}
+ .cases article{gap:26px}
+}
+
+figcaption,.meta,.tag,.facts p,.logos,.mini span,.sq .w,.foot,.cred2,.tl span,.pc .q span,form small,.cl dt,.hi,.num small{color:var(--mut2)!important}
+.facts b,.sq .w b{color:var(--ink)!important}
+.sg{grid-template-columns:1.4fr 1fr}
+.bigq{position:relative;margin-top:160px;height:680px;overflow:hidden}
+.bigq img{width:100%;height:100%;object-fit:cover;object-position:80% 30%}
+.bigq::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,20,24,.88) 0%,rgba(20,20,24,.6) 45%,rgba(20,20,24,0) 75%)}
+.bigq blockquote{position:absolute;z-index:2;left:6cqw;bottom:80px;margin:0;max-width:640px;color:#F4F2EE;font-family:var(--disp);font-weight:var(--dw);letter-spacing:var(--ls);font-size:calc(clamp(30px,3.8cqw,56px)*var(--k));line-height:1.08}
+.bigq blockquote span{display:block;font:400 15px 'Golos Text';letter-spacing:0;color:#9AA8FF;margin-top:24px}
+.mid{margin:120px 6cqw 0;padding:44px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.mid p{margin:0;font-size:clamp(20px,2cqw,26px);font-weight:500;max-width:560px;line-height:1.35}
+.cases .c2{grid-template-columns:1fr 1.2fr}
+@container (max-width:760px){.bigq{height:520px;margin-top:100px}.bigq img{object-position:78% 30%}.bigq::after{background:linear-gradient(0deg,rgba(20,20,24,.92) 0%,rgba(20,20,24,.5) 55%,rgba(20,20,24,0) 85%)}.bigq blockquote{left:20px;right:20px;bottom:40px}.mid{margin:80px 20px 0}.sg{grid-template-columns:1fr}}
+
+.tg{display:grid;grid-template-columns:.8fr 1.6fr;gap:5cqw;align-items:start}
+.tph{position:sticky;top:80px}.tph img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:60% 50%;border-radius:24px}
+.rows .trow{grid-template-columns:1fr 1.15fr;gap:3cqw}
+.rows .trow:first-child{border-top:0;padding-top:0}
+.tm .tk{margin:0 0 8px}
+.pc .q{margin:0 0 22px!important;font-size:19px!important;line-height:1.45;font-style:normal!important;color:var(--ink)}
+.pc .q span{font-size:13px}
+.pc h3{font-size:16px!important;font-weight:500!important;color:var(--acct);margin-bottom:18px}
+.sbig img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px;transform:rotate(2deg)}
+.sbig{margin-bottom:40px}
+.tl{grid-template-columns:repeat(3,1fr)}
+@container (max-width:760px){.tg{grid-template-columns:1fr}.tph{position:static}.tph img{aspect-ratio:4/3}.rows .trow{grid-template-columns:1fr}.tl{grid-template-columns:1fr 1fr}}
+
+.mq2{margin:44px 0 0;padding-left:22px;border-left:3px solid var(--acc);font-family:var(--disp);font-weight:var(--dw);letter-spacing:var(--ls);font-size:calc(clamp(22px,2.2cqw,30px)*var(--k));line-height:1.2;color:var(--ink);max-width:620px}
+.tph img{object-position:58% 50%}
+
+.nav a.logo{text-decoration:none;font-weight:600;font-size:17px;margin-right:auto}
+.nav .links a{text-decoration:none}
+.nav .links a:hover{color:var(--ink)}
+.theme{font:500 13px 'Golos Text';color:var(--ink);background:transparent;border:0;box-shadow:inset 0 0 0 1px var(--line);border-radius:99px;padding:9px 14px 9px 34px;cursor:pointer;position:relative;white-space:nowrap}
+.theme::before{content:'';position:absolute;left:12px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:linear-gradient(90deg,var(--ink) 50%,transparent 50%);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.light .tt-l,.dark .tt-d{display:none}
+.site{transition:background-color .35s,color .35s}
+.rv-in{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv-in.on{opacity:1;transform:none}
+.strike.draw::after{transform-origin:left center;animation:strk .7s .5s cubic-bezier(.6,0,.2,1) both}
+@keyframes strk{from{transform:rotate(-4deg) scaleX(0)}to{transform:rotate(-4deg) scaleX(1)}}
+.lnk,.u,.btn{transition:opacity .2s,transform .2s}.btn:hover{transform:translateY(-1px)}
+.vids{margin-top:80px}.vlab{font-size:14px;color:var(--acct);margin:0 0 22px}
+.vg{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.vc{display:flex;flex-direction:column;gap:8px;padding:22px;border-radius:20px;background:var(--sf);text-decoration:none;min-height:190px}
+.vc .pl{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--btn);color:var(--btnt);font-size:14px;margin-bottom:auto}
+.vc b{font-size:16px;font-weight:600;line-height:1.3;margin-top:22px}.vc>span:last-child{font-size:13px;color:var(--mut2)}
+.vc:hover{transform:translateY(-2px)}.vc{transition:transform .2s}
+@container (max-width:760px){.theme{padding:8px 10px 8px 30px;font-size:12px}.vg{grid-template-columns:1fr 1fr}.nav{gap:10px}.nav .btn.sm{display:none}}
+.nw{white-space:nowrap}
+
+/* ===== typography pass ===== */
+.f-dela{--ls:0em}
+.site h1,.site h2,.site h3{text-wrap:balance}
+.site p,.site dd,.site li,.site blockquote{text-wrap:pretty}
+.site h1{line-height:1.12}
+section>h2,.ag h2,.cg h2,.phead h1,.pcta h2{line-height:1.15}
+.site .mq2{max-width:880px;font-size:calc(clamp(22px,2.1cqw,29px)*var(--k));line-height:1.32;padding-left:26px}
+.sg>div:first-child{min-width:0}
+.bigq blockquote{max-width:780px;line-height:1.22}
+.kor{max-width:none}
+.kor blockquote{max-width:1000px;line-height:1.28}
+.kor p{max-width:860px;line-height:1.6}
+.bq>p{line-height:1.42}
+.cases .num{line-height:1}
+.lead{line-height:1.6}
+.sq p{line-height:1.6}
+.pc .q{line-height:1.5}
+.pc h3{line-height:1.4}
+.trow h3,.cases h3,.crow h3,.steps h3{line-height:1.3}
+.facts b{line-height:1.1}
+.site h1{text-wrap:wrap}
+.site .mq2.wide2{max-width:1000px;margin:90px 0 0;font-size:calc(clamp(24px,2.6cqw,36px)*var(--k));line-height:1.3}
+.site .mq2.wide2{max-width:none;font-size:calc(clamp(24px,2.9cqw,40px)*var(--k))}
+.site .mq2.col{max-width:none;margin:48px 0 0;font-size:calc(clamp(22px,2.2cqw,30px)*var(--k));line-height:1.32}
+@container (max-width:760px){section>h2,.ag h2,.cg h2,.pcta h2{font-size:calc(27px*var(--k))}.site h1,.site h2{hyphens:auto;-webkit-hyphens:auto}}
+@container (max-width:760px){section>h2.hl2{font-size:min(calc(27px*var(--k)),6.6cqw);white-space:normal}}
+@container (max-width:760px){section>h2.hl2{font-size:min(calc(27px*var(--k)),6.2cqw)}section>h2.hl2 span{display:block}}
+.tgbox{padding:40px;border-radius:24px;background:var(--sf);align-self:start}
+.tgq{font-size:19px!important;line-height:1.5;color:var(--ink)!important;margin:0 0 28px!important}
+.btn.big{padding:18px 32px;font-size:17px}
+.tgs{font-size:14px!important;color:var(--mut2)!important;margin:16px 0 0!important}
+@container (max-width:760px){.tgbox{padding:26px}}
+.nav a.logo{text-decoration:none;font-weight:600;font-size:17px;margin-right:auto}
+.nav .links a{text-decoration:none}
+.pin{padding:60px 6cqw 0}
+.back{display:inline-block;font-size:14px;color:var(--mut2);text-decoration:none;margin-bottom:56px}
+.phead h1{font-size:calc(clamp(38px,5cqw,76px)*var(--k));line-height:1.05;margin:0 0 30px;max-width:1100px}
+.phead .lead{max-width:720px}
+.meta4{display:grid;grid-template-columns:repeat(4,1fr);gap:3cqw;margin:56px 0 0;padding-top:24px;border-top:1px solid var(--line)}
+.meta4 dt{font-size:13px;color:var(--mut2)}.meta4 dd{margin:6px 0 0;font-size:17px;font-weight:500}
+.bign{display:grid;grid-template-columns:repeat(3,1fr);gap:4cqw;margin-top:70px}
+.bign p{margin:0;font-size:15px;color:var(--mut2);line-height:1.45}
+.bign b{display:block;font-size:clamp(52px,6cqw,92px);font-weight:400;letter-spacing:-.04em;line-height:.95;color:var(--acct);margin-bottom:14px}
+.pwide{margin:120px 6cqw 0}.pwide img{width:100%;height:520px;object-fit:cover;border-radius:24px}
+.crow{display:grid;grid-template-columns:1fr 2fr;gap:6cqw;padding:40px 0;border-top:1px solid var(--line)}
+.crow:last-child{border-bottom:1px solid var(--line)}
+.crow p{font-size:17px;color:var(--mut);margin:0 0 14px;max-width:720px}.crow b{color:var(--ink);font-weight:600}
+.cyc{font-size:16px!important;color:var(--ink)!important;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.cyc i{font-style:normal;color:var(--acct);margin:0 6px}
+.steps{list-style:none;padding:0;margin:0;counter-reset:st;display:grid;grid-template-columns:1fr 1fr;gap:0 6cqw}
+.steps li{counter-increment:st;padding:28px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:44px 1fr;column-gap:10px}
+.steps li::before{content:counter(st);grid-row:span 2;font-size:15px;color:var(--acct);font-weight:600;padding-top:2px}
+.steps h3{font-size:18px;margin:0 0 8px}.steps p{margin:0;font-size:15px;color:var(--mut)}
+.big{font-size:clamp(22px,2.4cqw,32px)!important;line-height:1.35!important;font-weight:500;max-width:1000px;margin:0 0 30px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:6cqw;margin-bottom:70px}.two p{font-size:17px;color:var(--mut);margin:0}
+section .bq{margin-top:60px}
+.mq2 span{display:block;font:400 14px 'Golos Text';color:var(--mut2);margin-top:14px;letter-spacing:0}
+.vid{display:flex;gap:24px;align-items:center;padding:34px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.vid .play{width:72px;height:72px;border-radius:50%;display:grid;place-items:center;background:var(--btn);color:var(--btnt);font-size:22px;flex:none}
+.vid b{display:block;font-size:20px;font-weight:600;margin-bottom:6px}.vid span{font-size:14px;color:var(--mut2)}
+.aqs{display:grid;grid-template-columns:1fr 1fr;gap:56px 6cqw;margin-top:70px}
+.aqt{font-size:18px;line-height:1.55;margin:0}.aq details{margin-top:12px}.aq .w{font-size:14px;color:var(--mut2);margin:14px 0 0}.aq .w b{color:var(--ink);font-weight:600}
+.filt{display:flex;flex-wrap:wrap;gap:8px;margin:-24px 0 44px}
+.filt button{font:500 14px 'Golos Text';padding:9px 16px;border-radius:99px;border:0;cursor:pointer;background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.filt button.on{background:var(--btn);color:var(--btnt);box-shadow:none}
+.cms{columns:3;column-gap:4cqw}
+.cm{break-inside:avoid;padding:0 0 30px;margin-bottom:30px;border-bottom:1px solid var(--line)}
+.cm p{margin:0 0 10px;font-size:16px;line-height:1.55}.cm span{font-size:13px;color:var(--mut2)}
+.pcta{padding-bottom:140px}.pcta h2{margin-bottom:34px}
+@container (max-width:760px){
+ .pin{padding:30px 20px 0}.back{margin-bottom:34px}
+ .meta4{grid-template-columns:1fr 1fr;gap:20px}.bign{grid-template-columns:1fr;gap:30px;margin-top:44px}
+ .pwide{margin:70px 20px 0}.pwide img{height:280px}
+ .crow,.steps,.two,.aqs{grid-template-columns:1fr}.crow{gap:12px}
+ .cms{columns:1}.pcta{padding-bottom:80px}
+}
+.letters{display:grid;grid-template-columns:1fr 1fr;gap:6cqw}
+.letter{display:grid;grid-template-columns:200px 1fr;gap:34px;align-items:start}
+.lt{border:0;padding:0;background:none;cursor:zoom-in;display:block}
+.lt img{width:100%;aspect-ratio:1/1.414;object-fit:cover;object-position:top;border-radius:6px;box-shadow:0 1px 2px rgba(0,0,0,.12),0 14px 34px rgba(0,0,0,.18);transition:transform .25s}
+.letter:nth-child(1) .lt img{transform:rotate(-2deg)}.letter:nth-child(2) .lt img{transform:rotate(1.5deg)}
+.lt:hover img{transform:rotate(0) scale(1.03)}
+.letter figcaption{margin:0;color:var(--ink)!important;font-size:15px}
+.letter b{display:block;font-size:20px;font-weight:600;margin-bottom:6px}
+.lk{display:block;color:var(--mut2);margin-bottom:18px}
+.lq{display:block;font-size:17px;line-height:1.55;margin-bottom:14px}
+.ls{display:block;font-size:13px;color:var(--mut2)}
+.lbx{position:fixed;inset:0;z-index:100;background:rgba(15,15,18,.86);display:grid;place-items:center;padding:24px;cursor:zoom-out}
+.lbx img{max-height:92vh;max-width:100%;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lbx button{position:absolute;top:16px;right:20px;font-size:34px;line-height:1;border:0;background:none;color:#fff;cursor:pointer}
+@container (max-width:760px){.letters{grid-template-columns:1fr;gap:56px}.letter{grid-template-columns:120px 1fr;gap:20px}}
+.certs{display:grid;grid-template-columns:1fr 1fr;gap:5cqw}
+.cert .lt img{aspect-ratio:1.414/1;object-position:center;transform:none!important}
+.cert:nth-child(1) .lt img{transform:rotate(-1deg)!important}.cert:nth-child(2) .lt img{transform:rotate(1deg)!important}
+.cert .lt:hover img{transform:scale(1.02)!important}
+.cert figcaption{margin-top:22px;color:var(--ink)!important}
+.cert b{display:block;font-size:18px;font-weight:600;margin-bottom:6px;line-height:1.35}
+.hint{font-size:13px;color:var(--mut2);margin:34px 0 0}
+.lt{position:relative}
+.lt::after{content:'⤢ открыть';position:absolute;right:10px;bottom:10px;font:500 12px 'Golos Text';padding:5px 10px;border-radius:99px;background:rgba(20,20,24,.75);color:#fff;opacity:0;transition:opacity .2s}
+.lt:hover::after,.lt:focus-visible::after{opacity:1}
+@media (hover:none){.lt::after{opacity:1}}
+@container (max-width:760px){.certs{grid-template-columns:1fr;gap:44px}}
+.ph{margin-top:100px}
+.phbox{height:460px;border-radius:24px;border:1.5px dashed var(--line);background:var(--sf);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:20px}
+.phbox b{font-size:17px;font-weight:600}.phbox span{font-size:14px;color:var(--mut2)}
+.vbig,.vph{display:flex;gap:20px;align-items:center;padding:26px 28px;border-radius:22px;margin:0 0 14px;text-decoration:none;max-width:820px}
+.vbig{background:var(--btn);color:var(--btnt)!important}.vbig .pl{background:var(--btnt);color:var(--btn)}
+.vph{border:1.5px dashed var(--line);background:var(--sf)}.vph .pl{background:var(--line);color:var(--ink)}
+.vbig .pl,.vph .pl{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;flex:none;font-size:18px}
+.vbig b,.vph b{display:block;font-size:18px;font-weight:600;margin-bottom:4px}.vbig span span,.vbig>span:last-child{font-size:14px}.vph>span:last-child{font-size:14px;color:var(--mut2)}
+.vbig:hover{transform:translateY(-2px)}.vbig{transition:transform .2s}
+.kor{margin:0 0 70px;padding:50px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);max-width:900px}
+.kor blockquote{margin:0 0 28px;font-family:var(--disp);font-weight:var(--dw);font-size:calc(clamp(24px,2.8cqw,38px)*var(--k));line-height:1.15}
+.kor p{font-size:18px;line-height:1.55;margin:0 0 12px}.kor .w{font-size:14px;color:var(--mut2);margin-top:20px}.kor .w b{color:var(--ink)}
+@container (max-width:760px){.phbox{height:260px}.ph{margin-top:60px}}
+.kor{max-width:none}.kor blockquote{max-width:1000px;line-height:1.28}.kor p{max-width:860px}
+a.vid{text-decoration:none;color:inherit}a.vid:hover .play{transform:scale(1.06)}.vid .play{transition:transform .2s}
+.vnote{margin:18px 0 0;font-size:15px}
+.vrev{background:var(--sf);color:var(--ink)!important}.vrev .pl{background:var(--btn);color:var(--btnt)}
+.vph2{border:1.5px dashed var(--line);background:var(--sf);border-radius:22px;padding:30px}
+.vph2 .play{background:var(--line)!important;color:var(--ink)!important}
+</style></head><body><div class="page"><div class="site light f-dela"><header class="phead"><nav class="nav"><a class="logo" href="index.html">Женя Акулов</a><span class="links"><a href="index.html#tasks">Задачи</a><a href="index.html#debates">Дебаты</a><a href="index.html#cases">Кейсы</a><a href="reviews.html">Отзывы</a></span><button class="theme" type="button" aria-label="Сменить тему"><span class="tt-d">светлая&nbsp;тема</span><span class="tt-l">тёмная&nbsp;тема</span></button><a class="btn sm" href="index.html#contact">Обсудить задачу</a></nav><div class="pin"><a class="back" href="index.html">← На&nbsp;главную</a>
+<p class="lbl">(&nbsp;отзывы&nbsp;)</p><h1>Что&nbsp;говорят после работы со&nbsp;мной</h1>
+<p class="lead">После каждой консультации спикеры анонимно оценивают встречу. Здесь их&nbsp;комментарии без&nbsp;правок по&nbsp;смыслу, отзывы заказчиков и&nbsp;благодарственные письма компаний.</p>
+<div class="bign"><p><b>79</b>оценок после консультаций с&nbsp;марта&nbsp;2025</p><p><b>9,8</b>средняя оценка из&nbsp;10</p><p><b>37</b>комментариев спикеров</p></div></div></header>
+<section><div class="vid vph2"><span class="play">▶</span><div><b>Видеоотзыв Полины Мальцевой сразу после&nbsp;TEDx</b><span>выпускница Harvard Business School, одна из&nbsp;создателей школы «Летово», основатель EdPower · здесь будет&nbsp;видео</span></div></div><p class="vnote"><a class="u" href="case-tedx.html">Кейс: как&nbsp;мы&nbsp;готовились к&nbsp;TEDx →</a></p></section>
+<section><p class="lbl">(&nbsp;заказчики&nbsp;)</p><h2>Отзывы руководителей</h2>
+<blockquote class="bq"><p>«Его&nbsp;сессии и&nbsp;занятия неизменно получают наивысшие баллы в&nbsp;анкетах обратной связи, а&nbsp;участники открыто называют его&nbsp;блоки одними из&nbsp;самых практически значимых и&nbsp;полезных за&nbsp;всю программу»</p><footer><b>Светлана Богданова</b> директор программы DBA-3,&nbsp;бизнес-школа ИМИСП</footer><details><summary>читать полностью</summary><p>Как&nbsp;директор программы DBA и&nbsp;основатель проекта по&nbsp;деловым коммуникациям, я&nbsp;постоянно сталкиваюсь с&nbsp;высокими требованиями к&nbsp;качеству спикеров. Наша аудитория&nbsp;— собственники бизнеса, генеральные директора и&nbsp;топ-менеджеры крупных компаний. Это&nbsp;люди с&nbsp;большим опытом управления и&nbsp;естественным скепсисом к&nbsp;любым внешним экспертам. Включить такую аудиторию в&nbsp;реальную работу, заставить снять «погоны» и&nbsp;выйти из&nbsp;зоны комфорта&nbsp;— непростая задача. Женя справляется с&nbsp;ней безупречно.</p><p><b>Энергия и&nbsp;стопроцентное вовлечение.</b> Женя работает с&nbsp;драйвом, который с&nbsp;первых минут убирает барьеры и&nbsp;закрытость. В&nbsp;дискуссию на&nbsp;равных включаются даже самые консервативные и&nbsp;статусные участники.</p><p><b>Работа с&nbsp;любым уровнем подготовки.</b> Женя адаптирует темп и&nbsp;глубину заданий под&nbsp;аудиторию&nbsp;— одинаково убедителен и&nbsp;с&nbsp;опытными переговорщиками, и&nbsp;с&nbsp;теми, кто&nbsp;только систематизирует свои навыки.</p><p><b>Работа с&nbsp;вопросами и&nbsp;сопротивлением.</b> То, как&nbsp;Женя отвечает на&nbsp;провокационные, сложные или&nbsp;скептические вопросы из&nbsp;зала,&nbsp;— само по&nbsp;себе мастер-класс по&nbsp;аргументации. Он&nbsp;не&nbsp;уходит от&nbsp;острых тем, никогда не&nbsp;давит авторитетом, а&nbsp;раскладывает логику оппонента структурно, корректно и&nbsp;доказательно.</p><p><b>Перевод дебатов в&nbsp;плоскость бизнес-результатов.</b> Женя учит прикладным управленческим навыкам: как&nbsp;защитить стратегию перед советом директоров, отстоять позицию компании в&nbsp;жёстких переговорах, выявлять манипуляции и&nbsp;удерживать фокус на&nbsp;сути решений.</p><p>Как&nbsp;отмечают слушатели, главный итог работы с&nbsp;Женей&nbsp;— сдвиг в&nbsp;культуре коммуникации топ-менеджеров: они&nbsp;переходят от&nbsp;эмоциональных споров к&nbsp;языку выверенных тезисов, фактов и&nbsp;логики. Искренне рекомендую Женю для&nbsp;работы с&nbsp;первыми лицами бизнеса, советами директоров и&nbsp;ключевыми управленческими командами.</p></details></blockquote>
+<div class="kor" id="korsakova"><p class="lbl">(&nbsp;после EuroPython&nbsp;)</p><blockquote>«Женя!!!!! Я&nbsp;вчера выступила!!! И&nbsp;просто разнесла всех в&nbsp;щи!!!! Это&nbsp;был просто разъ*б!!!!</blockquote><p>Ко&nbsp;мне подходили люди и&nbsp;спрашивали, типа, это&nbsp;точно моё первое выступление?? И&nbsp;вообще, блин, вся подготовка зря не&nbsp;прошла&nbsp;— я&nbsp;прям стрессовала-стрессовала, чтобы, выйдя на&nbsp;сцену, почувствовать волну и&nbsp;так&nbsp;спокойно и&nbsp;на&nbsp;расслабоне нести всё&nbsp;в&nbsp;массы! Просто офигеть!</p><p>И&nbsp;я&nbsp;получила гору фидбека после, и&nbsp;более того, меня позвали ещё&nbsp;на&nbsp;две конфы!!! Ну&nbsp;успех вообще!!! СПАСИБО ТЕБЕ!!!»</p><p class="w"><b>Дарья Корсакова</b> Manychat · <a class="u" href="https://www.youtube.com/watch?v=X7jbc8EVs-w" target="_blank" rel="noopener">её&nbsp;доклад на&nbsp;EuroPython ↗</a></p></div>
+<div class="aqs">
+<div class="aq"><p class="aqt">«64&nbsp;руководителя из&nbsp;региональных филиалов, инженерного склада ума, которые не&nbsp;работают публично. Не&nbsp;скрою, сначала многие воспринимали идею работы с&nbsp;тренером очень скептично. Однако Женя с&nbsp;огромным уважением к&nbsp;опыту помог руководителям подготовиться к&nbsp;защите своих проектов&nbsp;— программа стала проектом года федерального уровня в&nbsp;компании, обойдя десятки конкурентов»</p><details><summary>читать полностью</summary><p>Женя оттачивал аргументы и&nbsp;кастомизировал логику и&nbsp;структуру под&nbsp;каждого участника. Эта ювелирная работа дала свои плоды: руководство компании высоко оценило результаты работы в&nbsp;филиалах. Огромное спасибо, Женя, за&nbsp;совместную работу. Ты&nbsp;— супер профессионал!</p></details><p class="w"><b>Евгения Игошина</b> тимлидер управления по&nbsp;обучению, Блок технической инфраструктуры Ростелекома</p></div>
+<div class="aq"><p class="aqt">«Мы&nbsp;под&nbsp;большим впечатлением от&nbsp;формата дебатов, и&nbsp;у&nbsp;меня появилось желание сделать это&nbsp;регулярной практикой и&nbsp;запустить внутри компании клуб дебатов»</p><p class="w"><b>Константин Горелов</b> директор направления, PLITONIT (MC&nbsp;Bauchemie) · <a class="u" href="case-plitonit.html">кейс →</a></p></div>
+<div class="aq"><p class="aqt">«Женя, я&nbsp;выступила, и&nbsp;я&nbsp;ничего не&nbsp;забыла. И&nbsp;я&nbsp;шла чётко по&nbsp;структуре, которую мы&nbsp;с&nbsp;тобой сделали. И&nbsp;я&nbsp;была в&nbsp;тайминге»</p><details><summary>читать полностью</summary><p>Честно, без&nbsp;тебя этого выступления не&nbsp;было&nbsp;бы. Всю структуру, и&nbsp;как&nbsp;плести, и&nbsp;истории, и&nbsp;выводы, и&nbsp;так, чтобы&nbsp;вместить 15&nbsp;минут. Признательна и&nbsp;благодарна за&nbsp;то, как&nbsp;ты&nbsp;собрал эту речь и&nbsp;помог её&nbsp;подготовить и&nbsp;оттренировать. Это&nbsp;во&nbsp;многом твоя речь и&nbsp;твоя заслуга!</p></details><p class="w"><b>Полина Мальцева</b> ex-руководитель проекта создания школы «Летово», основатель EdPower · <a class="u" href="case-tedx.html">кейс →</a></p></div>
+<div class="aq"><p class="aqt">«Женя сочетает питерский такт и&nbsp;порядочность с&nbsp;высокой организованностью, системностью и&nbsp;ответственностью. Это&nbsp;человек, на&nbsp;которого можно положиться: он&nbsp;позитивен, конструктивен, всегда видит возможности и&nbsp;предлагает решения, которые работают»</p><details><summary>читать полностью</summary><p>Знаю Женю более трёх лет. За&nbsp;это&nbsp;время мы&nbsp;реализовали в&nbsp;Гимназии Примакова несколько проектов&nbsp;— от&nbsp;работы с&nbsp;небольшой группой до&nbsp;всероссийского чемпионата по&nbsp;дебатам и&nbsp;подготовки гимназистов к&nbsp;участию в&nbsp;сборной России на&nbsp;международных чемпионатах. Мы&nbsp;неоднократно вместе находили решения для&nbsp;сложных задач, и&nbsp;я&nbsp;всегда могла рассчитывать на&nbsp;его&nbsp;идеи, вовлечённость и&nbsp;результат.</p></details><p class="w"><b>Анна&nbsp;Мара</b> руководитель Центра лидерских программ, Гимназия Примакова</p></div>
+</div></section>
+<section><p class="lbl">(&nbsp;письма&nbsp;)</p><h2 class="hl2"><span>Благодарственные</span> <span>письма</span></h2><div class="letters">
+<figure class="letter"><button class="lt" data-src="img/letter-vk.jpg" aria-label="Открыть письмо VK"><img src="img/letter-vk.jpg" alt="Благодарственное письмо VK"></button>
+<figcaption><b>VK</b><span class="lk">4&nbsp;воркшопа и&nbsp;3&nbsp;курса по&nbsp;коммуникации</span><span class="lq">«Мы&nbsp;ценим ваше умение создавать вовлечённую атмосферу, адаптировать материалы под&nbsp;потребности группы и&nbsp;достигать измеримых результатов»</span><span class="ls">Ольга Шишенина, руководитель отдела по&nbsp;развитию ИТ и&nbsp;продуктовой экспертизы&nbsp;VK</span></figcaption></figure>
+<figure class="letter"><button class="lt" data-src="img/letter-spbpu.jpg" aria-label="Открыть письмо СПбПУ"><img src="img/letter-spbpu.jpg" alt="Благодарственное письмо СПбПУ"></button>
+<figcaption><b>Политех Петра Великого</b><span class="lk">2&nbsp;воркшопа по&nbsp;коммуникации</span><span class="lq">«Выражает вам искреннюю благодарность за&nbsp;проведение обучающих курсов по&nbsp;коммуникации. Будем рады продолжить сотрудничество и&nbsp;реализовывать с&nbsp;вами новые проекты»</span><span class="ls">А.&nbsp;П.&nbsp;Часовникова, начальник отдела стратегического планирования и&nbsp;развития&nbsp;СПбПУ</span></figcaption></figure>
+</div><p class="hint">Нажмите на&nbsp;письмо, чтобы&nbsp;прочитать его&nbsp;целиком</p></section>
+<section><p class="lbl">(&nbsp;сертификаты&nbsp;)</p><h2>Сертификаты</h2><div class="certs">
+<figure class="cert"><button class="lt" data-src="img/cert-icp.jpg" aria-label="Открыть сертификат ICP-ATF"><img src="img/cert-icp.jpg" alt="Сертификат ICAgile ICP-ATF"></button>
+<figcaption><b>ICAgile Certified Professional&nbsp;— Agile Team Facilitation (ICP-ATF)</b><span class="lk">Международный сертификат фасилитатора командной работы, ICAgile · март&nbsp;2025</span></figcaption></figure>
+<figure class="cert"><button class="lt" data-src="img/cert-wudc.jpg" aria-label="Открыть сертификат WUDC 2024"><img src="img/cert-wudc.jpg" alt="Сертификат чемпионата мира по дебатам WUDC 2024"></button>
+<figcaption><b>Чемпионат мира по&nbsp;дебатам WUDC 2024,&nbsp;Вьетнам</b><span class="lk">7-я&nbsp;команда в&nbsp;категории ESL, команда ВШЭ Санкт-Петербург (Зубко&nbsp;&amp;&nbsp;Акулов)</span></figcaption></figure>
+</div><p class="hint">Нажмите на&nbsp;документ, чтобы&nbsp;открыть его&nbsp;целиком</p></section>
+<section><p class="lbl">(&nbsp;спикеры&nbsp;)</p><h2>Что&nbsp;пишут спикеры после консультаций</h2>
+<div class="filt"><button class="on" data-f="all">все</button><button data-f="s">структура и&nbsp;логика</button><button data-f="p">подача и&nbsp;уверенность</button><button data-f="a">атмосфера</button></div>
+<div class="cms"><div class="cm" data-tags="s a"><p>Системный подход: последовательно проговорили варианты улучшения слайдов и&nbsp;подачи. Самое крутое, что&nbsp;Женя не&nbsp;давит и&nbsp;не&nbsp;настаивает на&nbsp;форме подачи в&nbsp;стиле «я&nbsp;знаю, как&nbsp;будет лучше», а&nbsp;обсуждает варианты.</p><span>Спикер Яндекса · сентябрь 2026 · структура · атмосфера</span></div><div class="cm" data-tags="a"><p>Очень аккуратные комментарии с&nbsp;учётом того, что&nbsp;спикер с&nbsp;высокой позиции, и&nbsp;вдумчивые, основанные на&nbsp;контексте выступления.</p><span>Спикер Яндекса · июль 2026 · атмосфера</span></div><div class="cm" data-tags="s"><p>Отлично структурировали план. Уже&nbsp;готовлюсь в&nbsp;четвёртый раз&nbsp;с&nbsp;Евгением, только положительный&nbsp;опыт.</p><span>Спикер Яндекса · июнь 2026 · структура</span></div><div class="cm" data-tags="a"><p>Вайб и&nbsp;профессионализм, насмотренность и&nbsp;советы.</p><span>Спикер Яндекса · июнь 2026 · атмосфера</span></div><div class="cm" data-tags="s"><p>Евгений выполнил свою задачу на&nbsp;110%: профессиональный разбор выступления и&nbsp;материала, отработал все&nbsp;мои&nbsp;ключевые зоны&nbsp;роста.</p><span>Спикер Яндекса · июнь 2026 · структура</span></div><div class="cm" data-tags="p"><p>С&nbsp;первых минут стало понятно, что&nbsp;моя&nbsp;подготовка в&nbsp;надёжных руках. За&nbsp;один час я&nbsp;получила советов и&nbsp;рекомендаций, которых раньше не&nbsp;получала за&nbsp;несколько тренингов ораторского мастерства. Очень вдохновляюще!</p><span>Спикер Яндекса · май 2026 ·&nbsp;подача</span></div><div class="cm" data-tags="p a"><p>Грамотный фидбек, попал в&nbsp;точку. Посоветовал варианты, как&nbsp;улучшить. И&nbsp;самое главное, зарядил позитивом и&nbsp;воодушевил перед выступлением.</p><span>Спикер Яндекса · май 2026 · подача · атмосфера</span></div><div class="cm" data-tags="s"><p>Очень понятные, релевантные, взвешенные комментарии.</p><span>Спикер Яндекса · март 2026 · структура</span></div><div class="cm" data-tags="s p"><p>Подробный разбор структуры доклада, советы, как&nbsp;сделать его&nbsp;лучше для&nbsp;восприятия аудитории, и&nbsp;как&nbsp;чувствовать себя увереннее во&nbsp;время выступления.</p><span>Спикер Яндекса · февраль 2026 · структура ·&nbsp;подача</span></div><div class="cm" data-tags="s"><p>Все&nbsp;комментарии были по&nbsp;делу и&nbsp;совпали с&nbsp;моими ощущениями о&nbsp;том, что&nbsp;хотелось бы&nbsp;улучшить.</p><span>Спикер Яндекса · декабрь 2025 · структура</span></div><div class="cm" data-tags="a"><p>Понравилось, что&nbsp;задержались, пока не&nbsp;решили все&nbsp;вопросы.</p><span>Спикер Яндекса · ноябрь 2025 · атмосфера</span></div><div class="cm" data-tags="a s"><p>Классный, позитивный настрой, дельные советы, как&nbsp;сделать структуру выступления&nbsp;лучше.</p><span>Спикер Яндекса · октябрь 2025 · атмосфера · структура</span></div><div class="cm" data-tags="p a"><p>Женя нашёл подход непосредственно к&nbsp;моим проблемам и&nbsp;бонусом дал советы, как&nbsp;справиться со&nbsp;стрессовыми моментами во&nbsp;время выступления, даже когда&nbsp;время встречи закончилось.</p><span>Спикер Яндекса · октябрь 2025 · подача · атмосфера</span></div><div class="cm" data-tags="s"><p>Смогли найти и&nbsp;подсветить важные логические промахи в&nbsp;докладе и&nbsp;нюансы по&nbsp;презентации, которые не&nbsp;отлавливали до&nbsp;этого! Я&nbsp;доволен на&nbsp;100%.</p><span>Спикер Яндекса · октябрь 2025 · структура</span></div><div class="cm" data-tags="s"><p>Фидбек был конструктивный. Я&nbsp;получила ответы на&nbsp;все&nbsp;свои вопросы, есть план по&nbsp;улучшению.</p><span>Спикер Яндекса · сентябрь 2025 · структура</span></div><div class="cm" data-tags="s"><p>Тренер на&nbsp;удивление много уловил и&nbsp;запомнил из&nbsp;контента доклада, больше, чем&nbsp;я&nbsp;ожидаю от&nbsp;целевой аудитории. Обратная связь была в&nbsp;виде хорошо структурированных actionable&nbsp;items.</p><span>Спикер Яндекса · сентябрь 2025 · структура</span></div><div class="cm" data-tags="s"><p>Полезные комментарии про&nbsp;ценностное обещание, подведение итогов, склеивание переходов и&nbsp;трату времени на&nbsp;ненужное.</p><span>Спикер Яндекса · сентябрь 2025 · структура</span></div><div class="cm" data-tags="p"><p>Тренер не&nbsp;только помог ещё&nbsp;раз&nbsp;пробежаться по&nbsp;материалу, но&nbsp;и&nbsp;предложил значительные улучшения. Теперь я&nbsp;уверен в&nbsp;себе и&nbsp;готов к&nbsp;выступлению.</p><span>Спикер Яндекса · сентябрь 2025 ·&nbsp;подача</span></div><div class="cm" data-tags="p"><p>Здорово, что&nbsp;обратная связь подаётся с&nbsp;примерами («вот&nbsp;здесь я&nbsp;бы&nbsp;сказал так...»): намного легче понять суть. И&nbsp;Женя давал не&nbsp;только комментарии по&nbsp;докладу, но&nbsp;и&nbsp;полезные фишки по&nbsp;выступлениям в&nbsp;общем.</p><span>Спикер Яндекса · сентябрь 2025 ·&nbsp;подача</span></div><div class="cm" data-tags="s"><p>Внимательный анализ доклада, выделение ключевых мыслей и&nbsp;акцентов, про&nbsp;которые не&nbsp;задумываешься.</p><span>Спикер Яндекса · сентябрь 2025 · структура</span></div><div class="cm" data-tags="s"><p>Очень крутые советы о&nbsp;том, как&nbsp;развернуть позиционирование доклада, чтобы&nbsp;показать пользу аудитории и&nbsp;сконцентрировать внимание на&nbsp;ключевых поинтах и&nbsp;выводах.</p><span>Спикер Яндекса · сентябрь 2025 · структура</span></div><div class="cm" data-tags="s"><p>На&nbsp;драфте доклада решили вещи, по&nbsp;которым у&nbsp;меня были вопросы и&nbsp;сомнения. Идеи, которые Женя предложил, прям по&nbsp;каждой проблеме попали.</p><span>Спикер Яндекса · сентябрь 2025 · структура</span></div><div class="cm" data-tags="s"><p>Тренер здорово подметил важные моменты, подсветил их&nbsp;и&nbsp;помог выстроить логичную цепочку для&nbsp;доклада.</p><span>Спикер Яндекса · август 2025 · структура</span></div><div class="cm" data-tags="a"><p>Боялся, что&nbsp;будет неловко, но&nbsp;была создана дружеская атмосфера, в&nbsp;которой было приятно работать.</p><span>Спикер Яндекса · август 2025 · атмосфера</span></div><div class="cm" data-tags="s"><p>Структурно и&nbsp;по&nbsp;делу разобрали драфт доклада, наметили правки и&nbsp;структуру плюс конкретные формулировки переходов между блоками.</p><span>Спикер Яндекса · июль 2025 · структура</span></div><div class="cm" data-tags="s"><p>Всё&nbsp;понятно объяснил, дал очень интересные инсайты и&nbsp;корректировки по&nbsp;презентации.</p><span>Спикер Яндекса · май 2025 · структура</span></div><div class="cm" data-tags="s"><p>Тренер привёл меня в&nbsp;правильное русло с&nbsp;точки зрения анализа аудитории и&nbsp;целей доклада.</p><span>Спикер Яндекса · май 2025 · структура</span></div><div class="cm" data-tags="a"><p>Очень толково, всё&nbsp;по&nbsp;делу и&nbsp;прям с&nbsp;душой.</p><span>Спикер Яндекса · май 2025 · атмосфера</span></div><div class="cm" data-tags="a s"><p>Мне понравилось, что&nbsp;он&nbsp;меня не&nbsp;критиковал, хотя я&nbsp;сама себя уже&nbsp;накритиковала в&nbsp;голове и&nbsp;была готова к&nbsp;этому. Очень хорошие советы по&nbsp;структуре!</p><span>Спикер Яндекса · май 2025 · атмосфера · структура</span></div><div class="cm" data-tags="s"><p>Отличная консультация. Все&nbsp;советы по&nbsp;делу и&nbsp;супер-конструктивные!&nbsp;Огонь!</p><span>Спикер Яндекса · май 2025 · структура</span></div><div class="cm" data-tags="s"><p>Женя за&nbsp;час помог собрать и&nbsp;уяснить знания, на&nbsp;освоение которых потребовалось бы&nbsp;несколько лет и&nbsp;выступлений. Большой лайк и&nbsp;благодарочка.</p><span>Спикер Яндекса · май 2025 · структура</span></div><div class="cm" data-tags="p"><p>Как&nbsp;тренер круто подошёл к&nbsp;сложным вопросам.</p><span>Спикер Яндекса · апрель 2025 ·&nbsp;подача</span></div><div class="cm" data-tags="s p"><p>Особенно понравились советы о&nbsp;том, что&nbsp;нужно расставлять акценты и&nbsp;вести слушателя по&nbsp;пунктам доклада, напоминая, на&nbsp;каком мы&nbsp;сейчас шаге. И&nbsp;лайфхак с&nbsp;тем, чтобы&nbsp;занизить ожидания в&nbsp;начале доклада.</p><span>Спикер Яндекса · апрель 2025 · структура ·&nbsp;подача</span></div><div class="cm" data-tags="a"><p>Понравилась вовлечённость тренера в&nbsp;процесс: он&nbsp;был готов выделить время, чтобы&nbsp;всё&nbsp;добить, несмотря на&nbsp;то&nbsp;что&nbsp;мы&nbsp;выбились из&nbsp;таймингов из-за длины моего выступления.</p><span>Спикер Яндекса · апрель 2025 · атмосфера</span></div><div class="cm" data-tags="s"><p>Понравилось, что&nbsp;тренер привёл конкретные шаги по&nbsp;улучшению презентации для&nbsp;коммуникации с&nbsp;аудиторией.</p><span>Спикер Яндекса · апрель 2025 · структура</span></div><div class="cm" data-tags="a"><p>Советы дельные. Тренер обратил внимание на&nbsp;проблемы, которые были мне не&nbsp;очевидны. Очень тактично доносил обратную связь, даже слишком, можно погрубее&nbsp;=)</p><span>Спикер Яндекса · март 2025 · атмосфера</span></div><div class="cm" data-tags="p"><p>Вдохновлялся тем, как&nbsp;тренер живо и&nbsp;здорово говорит и&nbsp;умеет управлять&nbsp;речью.</p><span>Спикер Яндекса · март 2025 ·&nbsp;подача</span></div></div></section>
+<section class="pcta"><h2>Похожая задача? Расскажите&nbsp;— предложу&nbsp;формат</h2><div class="row"><a class="btn" href="index.html#contact">Обсудить задачу</a><a class="lnk" href="https://t.me/jaackeer" target="_blank" rel="noopener">Написать в&nbsp;Telegram →</a></div></section>
+<footer class="foot"><span>© Женя Акулов,&nbsp;2026</span><span>Тренер по&nbsp;выступлениям, аргументации и&nbsp;дебатам</span></footer></div></div><script>(function(){
+var site=document.querySelector('.site');
+function set(t){site.classList.toggle('dark',t==='d');site.classList.toggle('light',t!=='d');document.documentElement.style.background=t==='d'?'#232327':'#F5F5F3';try{localStorage.setItem('zt',t)}catch(e){}}
+var t='l';try{t=localStorage.getItem('zt')||'l'}catch(e){}
+set(t);
+document.querySelectorAll('.theme').forEach(function(b){b.onclick=function(){set(site.classList.contains('dark')?'l':'d')}});
+document.querySelectorAll('.filt button').forEach(function(b){b.onclick=function(){document.querySelectorAll('.filt button').forEach(function(x){x.classList.toggle('on',x===b)});var f=b.dataset.f;document.querySelectorAll('.cm').forEach(function(c){c.hidden=!(f==='all'||c.dataset.tags.indexOf(f)>-1)})}});
+document.querySelectorAll('.lt').forEach(function(b){b.onclick=function(){var o=document.createElement('div');o.className='lbx';o.innerHTML='<img src="'+b.dataset.src+'" alt=""><button aria-label="Закрыть">×</button>';o.onclick=function(){o.remove()};document.body.appendChild(o)}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.lbx').forEach(function(x){x.remove()})});
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver' in window){
+ var els=document.querySelectorAll('.site section>h2,.site section>.lbl,.trow,.pc,.ag,.cases article,.sg,.sq,.bq,.bigq,.mid,.vc,.letter,.cert,.cm,.crow,.steps li,.bign p,.aq');
+ els.forEach(function(e){e.classList.add('rv-in')});
+ var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+ els.forEach(function(e){io.observe(e)});
+ document.querySelector('.strike')&&document.querySelector('.strike').classList.add('draw');
+}
+})();
+</script></body></html>

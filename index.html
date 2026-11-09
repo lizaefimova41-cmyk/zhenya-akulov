@@ -1,0 +1,295 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Женя Акулов&nbsp;— тренер по&nbsp;выступлениям, аргументации и&nbsp;дебатам</title><style>@font-face{font-family:'Golos Text';font-weight:400;font-display:swap;src:url(fonts/golos-text-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-weight:400;font-display:swap;src:url(fonts/golos-text-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Golos Text';font-weight:500;font-display:swap;src:url(fonts/golos-text-cyrillic-500-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-weight:500;font-display:swap;src:url(fonts/golos-text-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Golos Text';font-weight:600;font-display:swap;src:url(fonts/golos-text-cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-weight:600;font-display:swap;src:url(fonts/golos-text-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Golos Text';font-weight:700;font-display:swap;src:url(fonts/golos-text-cyrillic-700-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-weight:700;font-display:swap;src:url(fonts/golos-text-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Dela Gothic One';font-weight:400;font-display:swap;src:url(fonts/dela-gothic-one-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Dela Gothic One';font-weight:400;font-display:swap;src:url(fonts/dela-gothic-one-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Gearz';font-weight:700;src:url(fonts/gearz-b.woff2) format('woff2')}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:transparent;font-family:'Golos Text',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.page{max-width:1440px;margin:0 auto}
+.tool{position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;gap:8px 18px;padding:10px 16px;background:rgba(24,24,27,.9);backdrop-filter:blur(10px)}
+.tool>div{display:flex;gap:6px}
+.tool button{font:500 14px 'Golos Text';border:0;border-radius:99px;padding:8px 14px;background:rgba(255,255,255,.1);color:#eee;cursor:pointer}
+.tool button.on{background:#2F43C4;color:#fff}
+@media (max-width:700px){.tool{position:static}}
+
+.f-gearz{--disp:'Gearz';--dw:700;--ls:-.01em;--k:1}
+.f-dela{--disp:'Dela Gothic One';--dw:400;--ls:-.01em;--k:.88}
+
+.dark{--bg:#232327;--sf:#2D2D32;--ink:#F4F2EE;--mut:rgba(244,242,238,.8);--mut2:rgba(244,242,238,.55);--line:rgba(244,242,238,.13);--acc:#3D52D6;--acct:#9AA8FF;--hl:#1F2C86;--hlt:#F4F2EE;--btn:#2F43C4;--btnt:#FFFFFF}
+.light{--bg:#F5F5F3;--sf:#EBEBE8;--ink:#1E1F24;--mut:rgba(30,31,36,.84);--mut2:rgba(30,31,36,.56);--line:rgba(30,31,36,.13);--acc:#1F2C86;--acct:#1F2C86;--hl:#1F2C86;--hlt:#F4F2EE;--btn:#1F2C86;--btnt:#FFFFFF}
+
+.site{container-type:inline-size;background:var(--bg);color:var(--ink);overflow:hidden}
+.site a{color:inherit;cursor:pointer}
+.site h1,.site h2{font-family:var(--disp);font-weight:var(--dw);letter-spacing:var(--ls)}
+.site h3{font:600 20px/1.3 'Golos Text';margin:0}
+.site p{line-height:1.6}
+img{display:block;max-width:100%}figure{margin:0}figcaption{font-size:13px;color:var(--mut);margin-top:10px}
+.btn{display:inline-flex;align-items:center;white-space:nowrap;padding:15px 26px;border-radius:99px;font:600 16px 'Golos Text';text-decoration:none;border:0;cursor:pointer;background:var(--btn);color:var(--btnt)!important}
+.btn.sm{padding:10px 18px;font-size:14px}
+.lnk,.u{font-weight:500;text-decoration:underline;text-decoration-color:var(--acc);text-decoration-thickness:2px;text-underline-offset:5px}
+.row{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.lbl{font-size:14px;color:var(--acct);margin:0 0 18px}
+
+.nav{display:flex;align-items:center;gap:26px;padding:28px 6cqw}
+.nav .logo{font-weight:600;font-size:17px;margin-right:auto}
+.nav .links{display:flex;gap:26px;font-size:14px;color:var(--mut)}
+.h{display:grid;grid-template-columns:1.3fr 1fr;gap:7cqw;padding:80px 6cqw 120px;align-items:center}
+.hi{font-size:18px;color:var(--mut);margin:0 0 18px}
+.site h1{font-size:calc(clamp(42px,5.4cqw,80px)*var(--k));line-height:1.04;margin:0 0 36px}
+.acc{color:var(--acct)}
+.strike{position:relative;color:var(--mut);opacity:.6;white-space:nowrap;margin-right:.15em}
+.strike::after{content:'';position:absolute;left:-4%;right:-4%;top:50%;height:.11em;background:var(--acc);transform:rotate(-4deg)}
+.lead{font-size:18px;color:var(--mut);max-width:560px;margin:0 0 36px}
+.hph{position:relative;transform:rotate(2.5deg)}
+.hph img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;border-radius:24px}
+.glass{position:absolute;left:24px;bottom:28px;padding:12px 20px;border-radius:99px;font-size:15px;font-weight:500;color:#fff;background:rgba(35,35,39,.3);border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transform:rotate(-4deg)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:4cqw;padding:0 6cqw;border-top:1px solid var(--line);margin:0 6cqw;padding:28px 0 0}
+.facts p{margin:0;font-size:15px;color:var(--mut);line-height:1.45}.facts b{display:block;font-size:30px;font-weight:600;color:var(--ink);margin-bottom:4px;letter-spacing:-.02em}
+.logos{padding:36px 6cqw 0;margin:0;font-size:14px;color:var(--mut);max-width:1100px}
+
+section{padding:160px 6cqw 0}
+section>h2,.ag h2,.cg h2{font-size:calc(clamp(34px,4.2cqw,62px)*var(--k));line-height:1.05;margin:0 0 64px;max-width:1000px}
+
+.trow{display:grid;grid-template-columns:160px 1fr 1.2fr;gap:4cqw;padding:34px 0;border-top:1px solid var(--line)}
+.trow:last-child{border-bottom:1px solid var(--line)}
+.tk{margin:2px 0 0;font-size:15px;color:var(--acct)}
+.tm h3{margin-bottom:14px}.meta{margin:0;font-size:14px;color:var(--mut);line-height:1.6}
+.td p{margin:0 0 12px;font-size:16px;color:var(--mut)}
+details summary{list-style:none;cursor:pointer;font-size:14px;font-weight:500;color:var(--ink);display:inline-flex;gap:8px;align-items:center}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';font-size:18px;transition:transform .2s;color:var(--acct)}
+details[open] summary::after{transform:rotate(45deg)}
+details p,details ol{font-size:15px;color:var(--mut);line-height:1.6;margin:12px 0 0}details ol{padding-left:18px}
+
+.pcols{display:grid;grid-template-columns:repeat(3,1fr);gap:5cqw}
+.pc{border-top:2px solid var(--acc);padding-top:26px}
+.pc h3{font-size:21px;margin-bottom:16px}
+.pc>p{font-size:16px;color:var(--mut);margin:0 0 14px}
+.pc .q{margin:26px 0 0;font-size:15px;font-style:italic;color:var(--ink)}.pc .q span{display:block;font-style:normal;font-size:13px;color:var(--mut);margin-top:6px}
+
+.ag{display:grid;grid-template-columns:1.1fr 1fr;gap:7cqw;align-items:center}
+.ag .big img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px}
+.ag h2{margin-bottom:30px}
+.ag p{font-size:17px;color:var(--mut);margin:0 0 16px;max-width:560px}
+.dash{list-style:none;padding:0;margin:30px 0 0}.dash li{padding:12px 0;border-top:1px solid var(--line);font-size:15px}
+
+.wide img{width:100%;height:440px;object-fit:cover;border-radius:24px}
+.dg{display:grid;grid-template-columns:1fr 1fr;gap:6cqw;margin-top:56px}
+.dg p{font-size:17px;color:var(--mut);margin:0 0 14px}
+.dg .small{font-size:15px;margin-top:26px}
+.fl{margin:0}.fl dt{font-weight:600;font-size:17px;padding-top:18px;border-top:1px solid var(--line)}.fl dd{margin:4px 0 18px;color:var(--mut);font-size:15px}
+.cred2{margin:44px 0 0;font-size:14px;color:var(--mut);max-width:900px}
+
+.cases article{display:grid;grid-template-columns:1fr 1.2fr;gap:6cqw;align-items:center;padding:56px 0;border-top:1px solid var(--line)}
+.cases .num{margin:0;font-size:clamp(64px,8cqw,124px);font-weight:400;line-height:.9;letter-spacing:-.04em;color:var(--acct)}.num small{display:block;font-size:16px;letter-spacing:0;color:var(--mut);margin-top:12px}
+.tag{font-size:13px;color:var(--mut);margin:0 0 12px}
+.cases h3{font-size:24px;line-height:1.25;margin-bottom:16px}
+.cases article p{font-size:16px;color:var(--mut)}
+.c2 img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:24px}
+.cases .score{font-size:30px;font-weight:600;color:var(--ink)!important;margin:18px 0 0}.score span{display:block;font-size:14px;font-weight:400;color:var(--mut)}
+.row2{display:flex;gap:24px;margin-top:20px}
+.mini{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.mini li{display:grid;grid-template-columns:260px 1fr;gap:4cqw;padding:16px 0;border-bottom:1px solid var(--line);font-size:15px}.mini span{color:var(--mut)}
+
+.sg{display:grid;grid-template-columns:.8fr 1.3fr;gap:6cqw;align-items:start}
+.sg img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px;transform:rotate(-2deg)}
+.sg p{font-size:17px;color:var(--mut);margin:0 0 16px}
+.edu{display:grid;grid-template-columns:120px 1fr;gap:10px 20px;margin:34px 0 0;font-size:15px}.edu dt{color:var(--acct)}.edu dd{margin:0;color:var(--mut)}
+.tl{list-style:none;padding:0;margin:80px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.tl img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:16px;margin-bottom:12px}.tl span{font-size:14px;color:var(--mut)}
+
+.bq{margin:0 0 70px;padding:56px 6cqw 46px;border-radius:28px;background:var(--hl);color:var(--hlt)}
+.bq>p{font-size:clamp(22px,2.4cqw,32px);line-height:1.35;margin:0 0 26px;font-weight:500;max-width:1000px}
+.bq footer{font-size:15px;opacity:.75;margin-bottom:18px}.bq summary{color:var(--hlt)}.bq summary::after{color:var(--hlt)}.bq details p{color:var(--hlt);opacity:.8;max-width:900px}
+.sqs{display:grid;grid-template-columns:1fr 1fr;gap:50px 6cqw;margin-bottom:50px}
+.sq p{margin:0;font-size:18px;line-height:1.55}.sq .w{font-size:14px;color:var(--mut);margin-top:12px}.sq .w b{color:var(--ink);font-weight:600}
+
+.qs details{display:block;border-top:1px solid var(--line);padding:24px 0}.qs details:last-child{border-bottom:1px solid var(--line)}
+.qs summary{font-size:19px;display:flex;justify-content:space-between;width:100%}.qs details p{font-size:16px;max-width:760px}
+.contact{padding-bottom:140px}
+.cg{display:grid;grid-template-columns:1.2fr 1fr;gap:7cqw}
+.cg h2{margin-bottom:22px}.cg p{font-size:17px;color:var(--mut);margin:0 0 30px}
+.cl{display:grid;grid-template-columns:120px 1fr;gap:12px 20px;margin:0;font-size:17px}.cl dt{color:var(--mut)}.cl dd{margin:0}
+form{display:flex;flex-direction:column;gap:6px;padding-top:6px}
+form input,form textarea{font:17px 'Golos Text';padding:16px 0;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);outline:0}
+form input::placeholder,form textarea::placeholder{color:var(--mut)}
+form .btn{margin-top:26px;align-self:flex-start}form small{font-size:12px;color:var(--mut);margin-top:12px}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:26px 6cqw 36px;font-size:14px;color:var(--mut);border-top:1px solid var(--line)}
+
+@container (max-width:760px){
+ .nav{padding:18px 20px}.nav .links{display:none}
+ .h,.ag,.dg,.cases article,.sg,.cg,.pcols,.sqs{grid-template-columns:1fr}
+ .h{padding:30px 20px 70px;gap:44px}.hph{transform:rotate(1.5deg);margin:0 6px}
+ .facts{grid-template-columns:1fr 1fr;margin:0 20px;gap:22px}.logos{padding:28px 20px 0}
+ section{padding:100px 20px 0}section>h2,.ag h2,.cg h2{margin-bottom:40px}
+ .trow{grid-template-columns:1fr;gap:10px}
+ .mini li{grid-template-columns:1fr;gap:4px}
+ .wide img{height:240px}.tl{grid-template-columns:1fr 1fr}
+ .bq{padding:36px 22px}.contact{padding-bottom:80px}.foot{padding:22px 20px}
+ .cases article{gap:26px}
+}
+
+figcaption,.meta,.tag,.facts p,.logos,.mini span,.sq .w,.foot,.cred2,.tl span,.pc .q span,form small,.cl dt,.hi,.num small{color:var(--mut2)!important}
+.facts b,.sq .w b{color:var(--ink)!important}
+.sg{grid-template-columns:1.4fr 1fr}
+.bigq{position:relative;margin-top:160px;height:680px;overflow:hidden}
+.bigq img{width:100%;height:100%;object-fit:cover;object-position:80% 30%}
+.bigq::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,20,24,.88) 0%,rgba(20,20,24,.6) 45%,rgba(20,20,24,0) 75%)}
+.bigq blockquote{position:absolute;z-index:2;left:6cqw;bottom:80px;margin:0;max-width:640px;color:#F4F2EE;font-family:var(--disp);font-weight:var(--dw);letter-spacing:var(--ls);font-size:calc(clamp(30px,3.8cqw,56px)*var(--k));line-height:1.08}
+.bigq blockquote span{display:block;font:400 15px 'Golos Text';letter-spacing:0;color:#9AA8FF;margin-top:24px}
+.mid{margin:120px 6cqw 0;padding:44px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.mid p{margin:0;font-size:clamp(20px,2cqw,26px);font-weight:500;max-width:560px;line-height:1.35}
+.cases .c2{grid-template-columns:1fr 1.2fr}
+@container (max-width:760px){.bigq{height:520px;margin-top:100px}.bigq img{object-position:78% 30%}.bigq::after{background:linear-gradient(0deg,rgba(20,20,24,.92) 0%,rgba(20,20,24,.5) 55%,rgba(20,20,24,0) 85%)}.bigq blockquote{left:20px;right:20px;bottom:40px}.mid{margin:80px 20px 0}.sg{grid-template-columns:1fr}}
+
+.tg{display:grid;grid-template-columns:.8fr 1.6fr;gap:5cqw;align-items:start}
+.tph{position:sticky;top:80px}.tph img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:60% 50%;border-radius:24px}
+.rows .trow{grid-template-columns:1fr 1.15fr;gap:3cqw}
+.rows .trow:first-child{border-top:0;padding-top:0}
+.tm .tk{margin:0 0 8px}
+.pc .q{margin:0 0 22px!important;font-size:19px!important;line-height:1.45;font-style:normal!important;color:var(--ink)}
+.pc .q span{font-size:13px}
+.pc h3{font-size:16px!important;font-weight:500!important;color:var(--acct);margin-bottom:18px}
+.sbig img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px;transform:rotate(2deg)}
+.sbig{margin-bottom:40px}
+.tl{grid-template-columns:repeat(3,1fr)}
+@container (max-width:760px){.tg{grid-template-columns:1fr}.tph{position:static}.tph img{aspect-ratio:4/3}.rows .trow{grid-template-columns:1fr}.tl{grid-template-columns:1fr 1fr}}
+
+.mq2{margin:44px 0 0;padding-left:22px;border-left:3px solid var(--acc);font-family:var(--disp);font-weight:var(--dw);letter-spacing:var(--ls);font-size:calc(clamp(22px,2.2cqw,30px)*var(--k));line-height:1.2;color:var(--ink);max-width:620px}
+.tph img{object-position:58% 50%}
+
+.nav a.logo{text-decoration:none;font-weight:600;font-size:17px;margin-right:auto}
+.nav .links a{text-decoration:none}
+.nav .links a:hover{color:var(--ink)}
+.theme{font:500 13px 'Golos Text';color:var(--ink);background:transparent;border:0;box-shadow:inset 0 0 0 1px var(--line);border-radius:99px;padding:9px 14px 9px 34px;cursor:pointer;position:relative;white-space:nowrap}
+.theme::before{content:'';position:absolute;left:12px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:linear-gradient(90deg,var(--ink) 50%,transparent 50%);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.light .tt-l,.dark .tt-d{display:none}
+.site{transition:background-color .35s,color .35s}
+.rv-in{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv-in.on{opacity:1;transform:none}
+.strike.draw::after{transform-origin:left center;animation:strk .7s .5s cubic-bezier(.6,0,.2,1) both}
+@keyframes strk{from{transform:rotate(-4deg) scaleX(0)}to{transform:rotate(-4deg) scaleX(1)}}
+.lnk,.u,.btn{transition:opacity .2s,transform .2s}.btn:hover{transform:translateY(-1px)}
+.vids{margin-top:80px}.vlab{font-size:14px;color:var(--acct);margin:0 0 22px}
+.vg{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.vc{display:flex;flex-direction:column;gap:8px;padding:22px;border-radius:20px;background:var(--sf);text-decoration:none;min-height:190px}
+.vc .pl{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--btn);color:var(--btnt);font-size:14px;margin-bottom:auto}
+.vc b{font-size:16px;font-weight:600;line-height:1.3;margin-top:22px}.vc>span:last-child{font-size:13px;color:var(--mut2)}
+.vc:hover{transform:translateY(-2px)}.vc{transition:transform .2s}
+@container (max-width:760px){.theme{padding:8px 10px 8px 30px;font-size:12px}.vg{grid-template-columns:1fr 1fr}.nav{gap:10px}.nav .btn.sm{display:none}}
+.nw{white-space:nowrap}
+
+/* ===== typography pass ===== */
+.f-dela{--ls:0em}
+.site h1,.site h2,.site h3{text-wrap:balance}
+.site p,.site dd,.site li,.site blockquote{text-wrap:pretty}
+.site h1{line-height:1.12}
+section>h2,.ag h2,.cg h2,.phead h1,.pcta h2{line-height:1.15}
+.site .mq2{max-width:880px;font-size:calc(clamp(22px,2.1cqw,29px)*var(--k));line-height:1.32;padding-left:26px}
+.sg>div:first-child{min-width:0}
+.bigq blockquote{max-width:780px;line-height:1.22}
+.kor{max-width:none}
+.kor blockquote{max-width:1000px;line-height:1.28}
+.kor p{max-width:860px;line-height:1.6}
+.bq>p{line-height:1.42}
+.cases .num{line-height:1}
+.lead{line-height:1.6}
+.sq p{line-height:1.6}
+.pc .q{line-height:1.5}
+.pc h3{line-height:1.4}
+.trow h3,.cases h3,.crow h3,.steps h3{line-height:1.3}
+.facts b{line-height:1.1}
+.site h1{text-wrap:wrap}
+.site .mq2.wide2{max-width:1000px;margin:90px 0 0;font-size:calc(clamp(24px,2.6cqw,36px)*var(--k));line-height:1.3}
+.site .mq2.wide2{max-width:none;font-size:calc(clamp(24px,2.9cqw,40px)*var(--k))}
+.site .mq2.col{max-width:none;margin:48px 0 0;font-size:calc(clamp(22px,2.2cqw,30px)*var(--k));line-height:1.32}
+@container (max-width:760px){section>h2,.ag h2,.cg h2,.pcta h2{font-size:calc(27px*var(--k))}.site h1,.site h2{hyphens:auto;-webkit-hyphens:auto}}
+@container (max-width:760px){section>h2.hl2{font-size:min(calc(27px*var(--k)),6.6cqw);white-space:normal}}
+@container (max-width:760px){section>h2.hl2{font-size:min(calc(27px*var(--k)),6.2cqw)}section>h2.hl2 span{display:block}}
+.tgbox{padding:40px;border-radius:24px;background:var(--sf);align-self:start}
+.tgq{font-size:19px!important;line-height:1.5;color:var(--ink)!important;margin:0 0 28px!important}
+.btn.big{padding:18px 32px;font-size:17px}
+.tgs{font-size:14px!important;color:var(--mut2)!important;margin:16px 0 0!important}
+@container (max-width:760px){.tgbox{padding:26px}}
+</style></head><body><div class="page"><div class="site light f-dela"><header class="hero"><nav class="nav"><a class="logo" href="index.html">Женя Акулов</a><span class="links"><a href="#tasks">Задачи</a><a href="#approach">Подход</a><a href="#debates">Дебаты</a><a href="#cases">Кейсы</a><a href="#about">Обо&nbsp;мне</a><a href="#reviews">Отзывы</a></span><button class="theme" type="button" aria-label="Сменить тему"><span class="tt-d">светлая&nbsp;тема</span><span class="tt-l">тёмная&nbsp;тема</span></button><a class="btn sm" href="#contact">Обсудить задачу</a></nav>
+<div class="h"><div><p class="hi">Привет, я&nbsp;Женя&nbsp;—</p>
+<h1>помогаю сложным идеям звучать <span class="strike">умно</span> <span class="acc">ясно</span></h1>
+<p class="lead">Работаю не&nbsp;только с&nbsp;тем, как&nbsp;человек выступает, но&nbsp;и&nbsp;с&nbsp;тем, что&nbsp;он&nbsp;говорит: главная мысль, структура, аргументы и&nbsp;история. Готовлю спикеров к&nbsp;конференциям, обучаю команды и&nbsp;веду мероприятия&nbsp;— на&nbsp;русском и&nbsp;английском.</p>
+<div class="row"><a class="btn" href="#contact">Обсудить задачу</a><a class="lnk" href="#cases">Смотреть кейсы →</a></div></div>
+<figure class="hph"><img src="img/hero.jpg" alt="Женя Акулов"><span class="glass">сначала смысл, потом&nbsp;подача</span></figure></div>
+<div class="facts"><p><b>800+</b> выступлений подготовлено</p><p><b>200+</b> конференций, где&nbsp;выступали мои&nbsp;спикеры</p><p><b>400+</b> часов корпоративных тренингов</p><p><b>4000+</b> человек в&nbsp;зале на&nbsp;мероприятиях, которые я&nbsp;вёл</p></div>
+<p class="logos">Больше 7&nbsp;лет в&nbsp;выступлениях и&nbsp;дебатах. Работал с&nbsp;командами VK, Яндекса, OZON, Т-Банка, Газпром нефти, Ростелекома, Асконы, inDrive, Manychat, Sumsub, ecom.tech, Додо, X5&nbsp;Tech и&nbsp;MC&nbsp;Bauchemie. Мои&nbsp;спикеры выступали на&nbsp;TEDx Talks, HighLoad, CodeFest, Heisenbug, Frontend Conf, Mobius, VK&nbsp;JT и&nbsp;EuroPython.</p>
+</header><section id="tasks"><p class="lbl">(&nbsp;задачи&nbsp;)</p><h2>С&nbsp;чем&nbsp;ко&nbsp;мне приходят</h2>
+<div class="tg"><figure class="tph"><img src="img/dodo.jpg" alt="Женя на съезде партнёров Додо"><figcaption>Съезд партнёров&nbsp;Додо</figcaption></figure><div class="rows">
+<div class="trow"><div class="tm"><p class="tk">подготовить</p><h3>выступление к&nbsp;конференции, питчу или&nbsp;TEDx</h3><p class="meta">Готовый доклад: 1–2&nbsp;встречи<br>С&nbsp;нуля: обычно 3–5<br>TEDx, EuroPython, HighLoad</p></div><div class="td"><p>Для&nbsp;экспертов, руководителей, спикеров и&nbsp;организаторов конференций. В&nbsp;итоге&nbsp;— выступление с&nbsp;понятной главной мыслью, логикой и&nbsp;аргументами. И&nbsp;спикер, который понимает, что&nbsp;хочет сказать аудитории, и&nbsp;знает, как&nbsp;это&nbsp;сделать.</p><details><summary>подробнее</summary><ol><li>Разбираемся с&nbsp;задачей: кто&nbsp;аудитория, что&nbsp;ей&nbsp;важно и&nbsp;какую мысль она&nbsp;должна&nbsp;унести</li><li>Проверяем аргументы, отбираем содержание и&nbsp;убираем&nbsp;лишнее</li><li>Собираем структуру: примеры, объяснения, истории и&nbsp;переходы</li><li>Репетируем: подача, темп, интонация</li><li>Готовимся к&nbsp;вопросам и&nbsp;дорабатываем слабые&nbsp;места</li></ol></details></div></div>
+<div class="trow"><div class="tm"><p class="tk">обучить</p><h3>команду выступать, презентовать идеи и&nbsp;отстаивать позицию</h3><p class="meta">От&nbsp;воркшопа на&nbsp;2&nbsp;часа до&nbsp;программы<br>Онлайн и&nbsp;офлайн<br>VK: 4&nbsp;воркшопа и&nbsp;3&nbsp;курса</p></div><div class="td"><p>Для&nbsp;HR, L&amp;D и&nbsp;руководителей команд. Публичные выступления, презентации, функциональная риторика, аргументация и&nbsp;убеждение, дебаты.</p><details><summary>подробнее</summary><p>Я&nbsp;не&nbsp;очень люблю лекции как&nbsp;формат, хотя сам могу часами рассказывать об&nbsp;аргументации. Слушать, как&nbsp;нужно что-то делать,&nbsp;— не&nbsp;самый надёжный способ научиться. Поэтому короткая теория у&nbsp;меня сразу идёт в&nbsp;практику: участники объясняют сложное, отвечают на&nbsp;неудобные вопросы, питчат, спорят и&nbsp;получают конкретную обратную связь&nbsp;— что&nbsp;получилось, что&nbsp;нет и&nbsp;как&nbsp;сделать&nbsp;лучше.</p></details></div></div>
+<div class="trow"><div class="tm"><p class="tk">провести</p><h3>конференцию, секцию или&nbsp;дебаты на&nbsp;мероприятии</h3><p class="meta">X5&nbsp;DataFest 2025<br>Съезд партнёров Додо<br>Крокус Экспо, Сибур&nbsp;Арена</p></div><div class="td"><p>Для&nbsp;организаторов конференций и&nbsp;внутренних событий. Беру на&nbsp;себя всё, что&nbsp;происходит на&nbsp;сцене и&nbsp;в&nbsp;зале: спикеров, вопросы, тайминг и&nbsp;неожиданности.</p><details><summary>подробнее</summary><p>Веду мероприятия на&nbsp;русском и&nbsp;английском. Площадки: Крокус Экспо, кластер «Ломоносов», Сибур&nbsp;Арена.</p></details></div></div>
+<div class="trow"><div class="tm"><p class="tk">фасилитировать</p><h3>командные и&nbsp;стратегические&nbsp;сессии</h3><p class="meta">Сертифицированный<br>фасилитатор ICP-ATF</p></div><div class="td"><p>Помогаю команде договориться, принять решение и&nbsp;выйти с&nbsp;планом. На&nbsp;русском и&nbsp;английском.</p><details><summary>подробнее</summary><p>Онлайн и&nbsp;офлайн, от&nbsp;одной сессии до&nbsp;серии встреч.</p></details></div></div>
+</div></div>
+</section><section id="approach"><p class="lbl">(&nbsp;подход&nbsp;)</p><h2>Как&nbsp;я&nbsp;работаю</h2><div class="pcols">
+<div class="pc"><h3>Сначала разбираемся, что&nbsp;именно хотим сказать</h3><p class="q">«Смогли найти и&nbsp;подсветить важные логические промахи в&nbsp;докладе»<span>спикер Яндекса</span></p><details><summary>как&nbsp;это&nbsp;работает</summary><p>Часто у&nbsp;спикера есть всё&nbsp;для&nbsp;хорошего выступления: исследования, цифры, примеры, опыт. И&nbsp;десяток деталей, которые жалко выкинуть. Проблема в&nbsp;том, что&nbsp;аудитория этих лет с&nbsp;нами не&nbsp;провела.</p><p>Поэтому сначала разбираемся, что&nbsp;мы&nbsp;хотим сказать, почему слушателям должно быть не&nbsp;всё&nbsp;равно и&nbsp;на&nbsp;каких аргументах держится идея. Иногда для&nbsp;этого нужно не&nbsp;добавлять новое, а&nbsp;безжалостно сокращать написанное. И&nbsp;только потом&nbsp;— как&nbsp;всё&nbsp;это&nbsp;произнести.</p></details></div>
+<div class="pc"><h3>Не&nbsp;пытаюсь сделать из&nbsp;всех «правильных» спикеров</h3><p class="q">«Женя не&nbsp;давит и&nbsp;не&nbsp;настаивает на&nbsp;какой-то форме подачи, а&nbsp;обсуждает варианты»<span>спикер Яндекса</span></p><details><summary>как&nbsp;это&nbsp;работает</summary><p>Вокруг выступлений полно универсальных советов: уверенно стоять, правильно жестикулировать, шутить&nbsp;— желательно всё&nbsp;сразу. Но&nbsp;люди разные, и&nbsp;то, что&nbsp;естественно у&nbsp;одного, у&nbsp;другого выглядит как&nbsp;неловкая&nbsp;роль.</p><p>Поэтому я&nbsp;не&nbsp;буду лепить из&nbsp;вас Стива Джобса или&nbsp;Тони Роббинса. Разберём, какие привычки помогают удерживать внимание, а&nbsp;какие мешают, и&nbsp;найдём приёмы для&nbsp;следующего выступления. Не&nbsp;обязательно становиться другим человеком, чтобы&nbsp;стать хорошим спикером.</p></details></div>
+<div class="pc"><h3>Обоснованно критикую, последовательно исправляю</h3><p class="q">«Обратная связь была подана в&nbsp;виде хорошо структурированных actionable items»<span>спикер&nbsp;VK</span></p><details><summary>как&nbsp;это&nbsp;работает</summary><p>В&nbsp;спортивных дебатах есть принцип: конкретное всегда лучше абстрактного. Между «тут нужно доработать» и&nbsp;пониманием, как&nbsp;именно,&nbsp;— большая дистанция.</p><p>Поэтому я&nbsp;не&nbsp;только замечаю слабые места, но&nbsp;и&nbsp;предлагаю решения: формулировку вывода, пример для&nbsp;сложной мысли, связку между аргументами. Проговорю фрагмент речи, чтобы&nbsp;показать, где&nbsp;акценты. После консультации остаются не&nbsp;только замечания, но&nbsp;и&nbsp;готовые решения.</p></details></div>
+</div></section><div class="bigq"><img src="img/stage.jpg" alt="Женя Акулов на сцене"><blockquote>Не&nbsp;обязательно становиться другим человеком, чтобы&nbsp;стать хорошим спикером<span>Женя&nbsp;Акулов</span></blockquote></div><section class="about" id="about"><div class="ag"><figure class="big"><img src="img/x5-stage.jpg" alt="Женя ведёт X5 DataFest 2025"><figcaption>Веду X5&nbsp;DataFest&nbsp;2025</figcaption></figure>
+<div><p class="lbl">(&nbsp;обо&nbsp;мне&nbsp;)</p><h2>Сначала много выступал сам. Теперь помогаю готовиться&nbsp;другим</h2>
+<p>В&nbsp;профессию тренера и&nbsp;консультанта я&nbsp;пришёл из&nbsp;соревновательных дебатов, которыми занимался в&nbsp;студенческие годы. Там недостаточно уверенно и&nbsp;красиво говорить: приходится быстро разбираться в&nbsp;незнакомых вопросах, строить аргументы, слышать возражения и&nbsp;отвечать на&nbsp;них.</p><p>Сегодня этот опыт помогает мне работать с&nbsp;экспертами, руководителями и&nbsp;командами.</p>
+<ul class="dash"><li>Старший консультант BEsmart</li><li>Преподаю в&nbsp;ИМИСП и&nbsp;ВШЭ</li><li>Сертифицированный фасилитатор ICP-ATF</li></ul></div></div></section><section class="deb" id="debates"><p class="lbl">(&nbsp;дебаты&nbsp;)</p><h2>Дебаты: когда&nbsp;аргументацию приходится применять, а&nbsp;не&nbsp;обсуждать</h2>
+<figure class="wide"><img src="img/lecture.jpg" alt="Дебаты на занятии"></figure>
+<div class="dg"><div><p>Дебаты&nbsp;— интеллектуальная игра. За&nbsp;несколько минут нужно разобраться в&nbsp;сложной теме, подготовить аргументы в&nbsp;защиту позиции, доставшейся по&nbsp;жребию, и&nbsp;поспорить с&nbsp;другой командой по&nbsp;правилам.</p><p>Это&nbsp;идеальная тренировка аргументации, работы с&nbsp;возражениями, скорости мышления и&nbsp;публичной&nbsp;речи.</p>
+<p class="small">Дебаты со&nbsp;мной выбирают ИМИСП, VK, Яндекс, Самокат и&nbsp;другие. Проводил всероссийский чемпионат по&nbsp;дебатам в&nbsp;Гимназии Примакова&nbsp;— 32&nbsp;региона.</p></div>
+<dl class="fl"><dt>Дебатная игра</dt><dd>на&nbsp;корпоративе или&nbsp;конференции</dd><dt>Тренинг по&nbsp;аргументации</dt><dd>инструменты и&nbsp;сразу практика</dd><dt>Корпоративный турнир</dt><dd>команды соревнуются между собой, темы и&nbsp;механика под&nbsp;вашу аудиторию</dd><dt>Дебатный интенсив</dt><dd>серия встреч: инструменты аргументации, тренировки и&nbsp;финальная&nbsp;игра</dd></dl></div>
+<p class="cred2">Дважды плей-офф чемпионата мира WUDC (2022&nbsp;и&nbsp;2024) · 20+&nbsp;побед и&nbsp;титулов лучшего спикера на&nbsp;всероссийских и&nbsp;международных чемпионатах · главный судья крупнейших мероприятий по&nbsp;дебатам</p></section><section class="cases" id="cases"><p class="lbl">(&nbsp;кейсы&nbsp;)</p><h2>Что&nbsp;получилось</h2>
+<article class="c1"><p class="num">50&nbsp;→&nbsp;15<small>минут</small></p><div><p class="tag">TEDx на&nbsp;Кипре · на&nbsp;английском · 5&nbsp;встреч</p><h3>Превратили 15&nbsp;лет опыта в&nbsp;<span class="nw">15-минутную</span> историю об&nbsp;образовании&nbsp;детей</h3><p>Полина Мальцева, одна из&nbsp;создателей школы «Летово». Нашли главную мысль, отфильтровали материал, добавили личные истории и&nbsp;отрепетировали текст так, чтобы&nbsp;он&nbsp;звучал естественно на&nbsp;неродном&nbsp;языке.</p><p class="row2"><a class="u" href="https://www.youtube.com/watch?v=EdkUNtvmJrM" target="_blank" rel="noopener">Смотреть выступление ↗</a><a class="u" href="case-tedx.html">Читать кейс →</a></p></div></article>
+<article class="c2"><p class="num">9,8<small>из&nbsp;10&nbsp;— общая оценка интенсива</small></p><div><p class="tag">Плитонит (MC&nbsp;Bauchemie) · 90&nbsp;участников</p><h3>Дебаты для&nbsp;команды, которую сложно удивить тренингами, и&nbsp;рекордные оценки обратной&nbsp;связи</h3><p>Многие участники уже&nbsp;прошли немало тренингов, поэтому мы&nbsp;не&nbsp;стали строить программу вокруг очередной лекции. Участники знакомились с&nbsp;инструментами аргументации, пробовали их&nbsp;в&nbsp;дебатах и&nbsp;получали обратную связь. После саммита гендиректор заинтересовался идеей корпоративного дебатного&nbsp;клуба.</p><p class="tag">вовлечённость 9,75 · работа тренеров&nbsp;9,9</p><p class="row2"><a class="u" href="case-plitonit.html">Читать кейс →</a></p></div></article>
+<ul class="mini"><li><b>Ростелеком</b><span>64&nbsp;руководителя из&nbsp;филиалов подготовились к&nbsp;защите проектов, программа стала проектом года в&nbsp;компании</span></li><li><b>VK</b><span>4&nbsp;воркшопа и&nbsp;3&nbsp;курса по&nbsp;коммуникации для&nbsp;спикеров</span></li><li><b>EuroPython&nbsp;2026</b><span>Дарья Корсакова (Manychat): из&nbsp;статьи&nbsp;— в&nbsp;технический доклад на&nbsp;английском</span></li><li><b>X5&nbsp;DataFest&nbsp;2025</b><span>модерация всей конференции</span></li><li><b>Съезд партнёров&nbsp;Додо</b><span>подготовка спикеров и&nbsp;модерация AI-секции</span></li></ul><div class="vids"><p class="vlab">Выступления моих спикеров</p><div class="vg">
+<a class="vc" href="https://www.youtube.com/watch?v=EdkUNtvmJrM" target="_blank" rel="noopener"><span class="pl">▶</span><b>Best education for your&nbsp;child</b><span>Полина Мальцева · TEDx, на&nbsp;английском</span></a>
+<a class="vc" href="https://www.youtube.com/watch?v=X7jbc8EVs-w" target="_blank" rel="noopener"><span class="pl">▶</span><b>Stop firefighting: practical observability for&nbsp;Python</b><span>Дарья Корсакова · EuroPython, на&nbsp;английском</span></a>
+<a class="vc" href="https://www.youtube.com/watch?v=uPfRowyLxD0" target="_blank" rel="noopener"><span class="pl">▶</span><b>3&nbsp;Амиго на&nbsp;страже качества и&nbsp;спокойствия</b><span>Сергей Лебедев · SQA Days&nbsp;#35</span></a>
+<a class="vc" href="https://www.youtube.com/watch?v=vgUOVMnVZoY" target="_blank" rel="noopener"><span class="pl">▶</span><b>Укрощаем хайлоад из&nbsp;тысячи разработчиков</b><span>Павел Шерепо · HighLoad++</span></a>
+</div></div></section><div class="mid"><p>Готовитесь к&nbsp;выступлению или&nbsp;ищете формат для&nbsp;команды?</p><div class="row"><a class="btn" href="#contact">Обсудить задачу</a><a class="lnk" href="https://t.me/jaackeer" target="_blank" rel="noopener">Написать в&nbsp;Telegram →</a></div></div><section class="story"><p class="lbl">(&nbsp;как&nbsp;я&nbsp;сюда попал&nbsp;)</p><h2>От&nbsp;пропущенной футбольной тренировки до&nbsp;чемпионата мира по&nbsp;дебатам и&nbsp;подготовки <span class="nw">топ-спикеров</span></h2>
+<div class="sg"><div><p>С&nbsp;восьми лет я&nbsp;был довольно громким проказником-спортсменом: занимался футболом и&nbsp;лёгкой атлетикой, мечтал сыграть за&nbsp;«Барселону» и&nbsp;забить гол с&nbsp;передачи Лео&nbsp;Месси.</p>
+<p>В&nbsp;12&nbsp;лет я&nbsp;совершенно случайно вышел в&nbsp;финал конкурса чтецов, на&nbsp;который пошёл с&nbsp;прагматичной целью&nbsp;— легально прогулять уроки. Ради финала в&nbsp;Москве пришлось пропустить предматчевую тренировку. Команда это&nbsp;решение не&nbsp;оценила. Зато я&nbsp;обнаружил, что&nbsp;выступать мне нравится не&nbsp;меньше, чем&nbsp;играть в&nbsp;футбол.</p>
+<details><summary>что&nbsp;было&nbsp;дальше</summary><p>В&nbsp;университете я&nbsp;увлёкся парламентскими дебатами. Сначала много спорил на&nbsp;тренировках клуба Вышки, потом начал ездить на&nbsp;турниры по&nbsp;России и&nbsp;за&nbsp;рубеж, а&nbsp;со&nbsp;временем&nbsp;— регулярно на&nbsp;них побеждать. Постепенно меня стало интересовать не&nbsp;только то, как&nbsp;выиграть раунд, но&nbsp;и&nbsp;почему одни аргументы убеждают, а&nbsp;другие рассыпаются при&nbsp;первом возражении.</p><p>Так&nbsp;дебаты превратились в&nbsp;профессию. Сейчас проекты очень разные: от&nbsp;подготовки пятнадцатиминутного доклада до&nbsp;большой конференции или&nbsp;всероссийского чемпионата по&nbsp;дебатам для&nbsp;школьников. Но&nbsp;меня по-прежнему интересует одно: как&nbsp;помочь людям разобраться в&nbsp;собственных мыслях и&nbsp;объяснить их&nbsp;другим. Желательно так, чтобы&nbsp;никому не&nbsp;приходилось догадываться, что&nbsp;именно им&nbsp;хотели сказать.</p></details>
+<blockquote class="mq2 col">Мир полон невероятных идей, которые должны быть услышаны. Я&nbsp;помогаю их&nbsp;авторам донести их&nbsp;до&nbsp;тех, кому они&nbsp;нужны.</blockquote>
+</div><div><figure class="sbig"><img src="img/child.jpg" alt="Женя в 12 лет на конкурсе чтецов"><figcaption>12&nbsp;лет, финал конкурса&nbsp;чтецов</figcaption></figure><dl class="edu"><dt>Работа</dt><dd>Старший консультант по&nbsp;подготовке спикеров, BEsmart</dd><dt>Преподаю</dt><dd>DBA в&nbsp;ИМИСП, ВШЭ, Академия талантов, Гимназия Примакова</dd><dt>Образование</dt><dd>Магистр политологии НИУ ВШЭ, Comparative Politics of&nbsp;Eurasia, диплом с&nbsp;отличием</dd></dl></div></div>
+<ol class="tl"><li><img src="img/training.jpg" alt=""><span>Парламентские дебаты и&nbsp;чемпионат мира по&nbsp;дебатам</span></li><li><img src="img/x5-hall.jpg" alt=""><span>Лекции и&nbsp;тренинги по&nbsp;дебатам для&nbsp;студентов и&nbsp;команд</span></li><li><img src="img/dodo.jpg" alt=""><span>Выступления на&nbsp;больших сценах и&nbsp;обучение спикеров</span></li></ol></section><section class="revs" id="reviews"><p class="lbl">(&nbsp;отзывы&nbsp;)</p><h2>Что&nbsp;говорят</h2>
+<blockquote class="bq"><p>«Его&nbsp;сессии и&nbsp;занятия неизменно получают наивысшие баллы в&nbsp;анкетах обратной связи, а&nbsp;участники открыто называют его&nbsp;блоки одними из&nbsp;самых практически значимых и&nbsp;полезных за&nbsp;всю программу»</p><footer><b>Светлана Богданова</b> директор программы DBA-3,&nbsp;бизнес-школа ИМИСП</footer>
+<details><summary>читать полностью</summary><p>Наша аудитория&nbsp;— собственники бизнеса, генеральные директора и&nbsp;топ-менеджеры крупных компаний. Люди с&nbsp;большим опытом управления и&nbsp;естественным скепсисом к&nbsp;внешним экспертам. Включить такую аудиторию в&nbsp;реальную работу, заставить снять «погоны» и&nbsp;выйти из&nbsp;зоны комфорта&nbsp;— непростая задача. Женя справляется с&nbsp;ней безупречно.</p><p>То, как&nbsp;Женя отвечает на&nbsp;провокационные, сложные или&nbsp;скептические вопросы из&nbsp;зала,&nbsp;— само по&nbsp;себе мастер-класс по&nbsp;аргументации. Он&nbsp;не&nbsp;уходит от&nbsp;острых тем, никогда не&nbsp;давит авторитетом, а&nbsp;раскладывает логику оппонента структурно, корректно и&nbsp;доказательно.</p></details></blockquote>
+<div class="sqs">
+<div class="sq"><p>«Женя, я&nbsp;выступила, и&nbsp;я&nbsp;ничего не&nbsp;забыла. И&nbsp;я&nbsp;шла чётко по&nbsp;структуре, которую мы&nbsp;с&nbsp;тобой сделали. И&nbsp;я&nbsp;была в&nbsp;тайминге»</p><p class="w"><b>Полина Мальцева</b> основатель EdPower · <a class="u" href="case-tedx.html">кейс →</a></p></div>
+<div class="sq"><p>«64&nbsp;руководителя из&nbsp;региональных филиалов, инженерного склада ума, которые не&nbsp;работают публично. Программа стала проектом года федерального уровня в&nbsp;компании, обойдя десятки конкурентов»</p><p class="w"><b>Евгения Игошина</b> управление по&nbsp;обучению, Ростелеком</p></div>
+<div class="sq"><p>«Мы&nbsp;под&nbsp;большим впечатлением от&nbsp;формата дебатов, и&nbsp;у&nbsp;меня появилось желание запустить внутри компании клуб дебатов»</p><p class="w"><b>Константин Горелов</b> PLITONIT (MC&nbsp;Bauchemie) · <a class="u" href="case-plitonit.html">кейс →</a></p></div>
+<div class="sq"><p>«Женя сочетает питерский такт и&nbsp;порядочность с&nbsp;высокой организованностью, системностью и&nbsp;ответственностью»</p><p class="w"><b>Анна&nbsp;Мара</b> Центр лидерских программ, Гимназия Примакова</p></div>
+<div class="sq"><p>«Я&nbsp;вчера выступила!!! Ко&nbsp;мне подходили люди и&nbsp;спрашивали: это&nbsp;точно моё первое выступление?? Я&nbsp;получила гору фидбека, и&nbsp;меня позвали ещё&nbsp;на&nbsp;две конфы! Спасибо тебе!!!»</p><p class="w"><b>Дарья Корсакова</b> Manychat, после EuroPython · <a class="u" href="reviews.html#korsakova">полностью →</a></p></div>
+<div class="sq"><p>«Женя за&nbsp;час помог собрать и&nbsp;уяснить знания, на&nbsp;освоение которых потребовалось&nbsp;бы&nbsp;несколько лет и&nbsp;выступлений»</p><p class="w"><b>Спикер Яндекса</b> </p></div>
+</div><p><a class="u" href="reviews.html">Все&nbsp;отзывы и&nbsp;благодарственные письма →</a></p></section><section class="faq"><p class="lbl">(&nbsp;вопросы&nbsp;)</p><h2>Частые вопросы</h2><div class="qs">
+<details><summary>Сколько встреч нужно, чтобы&nbsp;подготовить выступление?</summary><p>Если&nbsp;доклад уже&nbsp;готов, часто хватает 1–2&nbsp;встреч. Если&nbsp;собираем с&nbsp;нуля&nbsp;— обычно&nbsp;3–5.</p></details>
+<details><summary>Можно подготовиться к&nbsp;выступлению на&nbsp;английском?</summary><p>Да. Работаю на&nbsp;русском и&nbsp;английском, готовил спикеров к&nbsp;TEDx и&nbsp;EuroPython.</p></details>
+<details><summary>Работаете онлайн?</summary><p>Да, онлайн и&nbsp;офлайн.</p></details>
+<details><summary>Чем&nbsp;дебаты отличаются от&nbsp;обычного тренинга?</summary><p>На&nbsp;тренинге аргументацию обсуждают, в&nbsp;дебатах её&nbsp;приходится применять: разобраться в&nbsp;теме, защитить случайную позицию и&nbsp;ответить сопернику.</p></details></div></section><section class="contact" id="contact"><p class="lbl">(&nbsp;контакты&nbsp;)</p><div class="cg"><div><h2>Расскажите о&nbsp;задаче&nbsp;— предложу&nbsp;формат</h2><p>Онлайн и&nbsp;офлайн, на&nbsp;русском и&nbsp;английском.</p>
+<dl class="cl"><dt>Telegram</dt><dd><a href="https://t.me/jaackeer" target="_blank" rel="noopener">@jaackeer</a></dd><dt>ВКонтакте</dt><dd><a href="https://vk.com/jaackeer" target="_blank" rel="noopener">@jaackeer</a></dd><dt>Телефон</dt><dd><a href="tel:+79110118456">+7&nbsp;911&nbsp;011-84-56</a></dd><dt>Канал</dt><dd><a href="https://t.me/debat_govorilnya" target="_blank" rel="noopener">@debat_govorilnya</a>&nbsp;— о&nbsp;дебатах и&nbsp;аргументации</dd><dt>Instagram</dt><dd><a href="https://instagram.com/jaackeer" target="_blank" rel="noopener">@jaackeer</a></dd></dl></div>
+<div class="tgbox"><p class="tgq">Проще всего написать мне в&nbsp;Telegram: расскажите, к&nbsp;какому выступлению или&nbsp;событию готовитесь, и&nbsp;я&nbsp;предложу формат.</p><a class="btn big" href="https://t.me/jaackeer" target="_blank" rel="noopener">Написать в&nbsp;Telegram</a><p class="tgs">@jaackeer · отвечаю в&nbsp;течение&nbsp;дня</p></div></div></section>
+<footer class="foot"><span>© Женя Акулов,&nbsp;2026</span><span>Тренер по&nbsp;выступлениям, аргументации и&nbsp;дебатам</span></footer></div></div><script>(function(){
+var site=document.querySelector('.site');
+function set(t){site.classList.toggle('dark',t==='d');site.classList.toggle('light',t!=='d');document.documentElement.style.background=t==='d'?'#232327':'#F5F5F3';try{localStorage.setItem('zt',t)}catch(e){}}
+var t='l';try{t=localStorage.getItem('zt')||'l'}catch(e){}
+set(t);
+document.querySelectorAll('.theme').forEach(function(b){b.onclick=function(){set(site.classList.contains('dark')?'l':'d')}});
+document.querySelectorAll('.filt button').forEach(function(b){b.onclick=function(){document.querySelectorAll('.filt button').forEach(function(x){x.classList.toggle('on',x===b)});var f=b.dataset.f;document.querySelectorAll('.cm').forEach(function(c){c.hidden=!(f==='all'||c.dataset.tags.indexOf(f)>-1)})}});
+document.querySelectorAll('.lt').forEach(function(b){b.onclick=function(){var o=document.createElement('div');o.className='lbx';o.innerHTML='<img src="'+b.dataset.src+'" alt=""><button aria-label="Закрыть">×</button>';o.onclick=function(){o.remove()};document.body.appendChild(o)}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.lbx').forEach(function(x){x.remove()})});
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver' in window){
+ var els=document.querySelectorAll('.site section>h2,.site section>.lbl,.trow,.pc,.ag,.cases article,.sg,.sq,.bq,.bigq,.mid,.vc,.letter,.cert,.cm,.crow,.steps li,.bign p,.aq');
+ els.forEach(function(e){e.classList.add('rv-in')});
+ var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+ els.forEach(function(e){io.observe(e)});
+ document.querySelector('.strike')&&document.querySelector('.strike').classList.add('draw');
+}
+})();
+</script></body></html>
