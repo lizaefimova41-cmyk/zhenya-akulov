@@ -277,6 +277,32 @@ section>h2,.ag h2,.cg h2,.phead h1,.pcta h2{line-height:1.15}
  .bign b{font-size:46px!important}
 }
 @container (max-width:760px){section>h2,.ag h2,.cg h2,.pcta h2,.sg h2{font-size:min(calc(25px*var(--k)),7.2cqw)}.site h1{font-size:min(calc(32px*var(--k)),9cqw)}}
+/* video thumbs */
+.site .vc{padding:0;overflow:hidden;min-height:0;gap:6px}
+.vth{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;margin-bottom:6px}
+.vth img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.vc:hover .vth img{transform:scale(1.04)}
+.vth .pl{position:absolute;left:14px;bottom:14px;margin:0!important;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.site .vc b{margin:6px 18px 0}.site .vc>span:last-child{margin:0 18px 20px}
+@container (max-width:760px){.site .vc{flex:0 0 78%}}
+/* sticky nav + burger */
+.site{overflow:clip}
+.nav{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 86%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);transition:box-shadow .25s,padding .25s}
+.nav.scrolled{box-shadow:0 1px 0 var(--line);padding-top:14px;padding-bottom:14px}
+section,[id]{scroll-margin-top:84px}
+html{scroll-behavior:smooth}
+.burger{display:none;width:38px;height:38px;border:0;border-radius:50%;background:transparent;box-shadow:inset 0 0 0 1px var(--line);cursor:pointer;flex:none;place-items:center;align-content:center;gap:5px;padding:0}
+.burger span{display:block;width:16px;height:1.8px;background:var(--ink);border-radius:2px;transition:transform .25s}
+.nav.open .burger span:first-child{transform:translateY(3.4px) rotate(45deg)}
+.nav.open .burger span:last-child{transform:translateY(-3.4px) rotate(-45deg)}
+@container (max-width:760px){
+ .burger{display:grid;margin-left:auto}
+ .nav .logo{margin-right:0}
+ .nav .links{display:flex!important;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;padding:6px 20px 18px;background:var(--bg);box-shadow:0 1px 0 var(--line),0 18px 30px rgba(0,0,0,.08);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s,transform .2s,visibility .2s}
+ .nav.open .links{opacity:1;visibility:visible;transform:none}
+ .nav .links a{font-size:18px;padding:12px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+ .nav .links a:last-child{border-bottom:0}
+}
 .nav a.logo{text-decoration:none;font-weight:600;font-size:17px;margin-right:auto}
 .nav .links a{text-decoration:none}
 .pin{padding:60px 6cqw 0}
@@ -369,7 +395,7 @@ a.vid{text-decoration:none;color:inherit}a.vid:hover .play{transform:scale(1.06)
 @container (max-width:760px){.phead h1{font-size:min(calc(32px*var(--k)),7.6cqw)}}
 @container (max-width:760px){.phead h1{font-size:min(calc(32px*var(--k)),6.6cqw)}}
 .pwide img.natimg{height:auto;max-width:980px;width:100%}
-</style></head><body><div class="page"><div class="site light f-dela"><header class="phead"><nav class="nav"><a class="logo" href="index.html">Женя Акулов</a><span class="links"><a href="index.html#tasks">Задачи</a><a href="index.html#debates">Дебаты</a><a href="index.html#cases">Кейсы</a><a href="reviews.html">Отзывы</a></span><button class="theme" type="button" aria-label="Сменить тему" title="Сменить тему"><svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg><svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button><a class="btn sm" href="index.html#contact">Обсудить задачу</a></nav><div class="pin"><a class="back" href="index.html#cases">← Все&nbsp;кейсы</a>
+</style></head><body><div class="page"><div class="site light f-dela"><nav class="nav"><a class="logo" href="index.html">Женя Акулов</a><span class="links"><a href="index.html#tasks">Задачи</a><a href="index.html#debates">Дебаты</a><a href="index.html#cases">Кейсы</a><a href="reviews.html">Отзывы</a></span><button class="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span></button><button class="theme" type="button" aria-label="Сменить тему" title="Сменить тему"><svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg><svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button><a class="btn sm" href="index.html#contact">Обсудить задачу</a></nav><header class="phead"><div class="pin"><a class="back" href="index.html#cases">← Все&nbsp;кейсы</a>
 <p class="lbl">(&nbsp;кейс · корпоративное обучение · дебаты&nbsp;)</p><h1>Дебаты для&nbsp;команды, которую сложно удивить тренингами</h1>
 <p class="lead">Ежегодный саммит Плитонита: 90&nbsp;сотрудников, которые прошли уже&nbsp;десятки тренингов, и&nbsp;программа, построенная вокруг дебатов.</p>
 <dl class="meta4"><div><dt>Клиент</dt><dd>Плитонит, MC&nbsp;Bauchemie</dd></div><div><dt>Участники</dt><dd>90&nbsp;человек</dd></div><div><dt>Формат</dt><dd>день обучения на&nbsp;саммите</dd></div><div><dt>Подготовка</dt><dd>полгода до&nbsp;саммита</dd></div></dl>
@@ -400,4 +426,5 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserve
 }
 })();
 (function(){var m=matchMedia('(max-width:760px)');function f(){document.querySelectorAll('.more-m').forEach(function(d){d.open=!m.matches})}f();m.addEventListener&&m.addEventListener('change',f)})();
+(function(){document.querySelectorAll('.nav').forEach(function(n){var b=n.querySelector('.burger');if(b)b.onclick=function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)};n.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');b&&b.setAttribute('aria-expanded','false')})});function s(){n.classList.toggle('scrolled',window.scrollY>10)}window.addEventListener('scroll',s,{passive:true});s()});document.addEventListener('click',function(e){document.querySelectorAll('.nav.open').forEach(function(n){if(!n.contains(e.target))n.classList.remove('open')})})})();
 </script></body></html>
